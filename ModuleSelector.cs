@@ -14,7 +14,8 @@ namespace KTANE_Assistant
             { "Anagrams", () => anagrams ??= new frmAnagrams(true) },
             { "Astrology", () => Astrology ??= new frmAstrology(true) },
             { "Battleship", () => battleship ??= new frmBattleships(true) },
-            { "Binary LEDs", () => BinaryLEDs ??= new frmBinaryLEDs(false) },
+            { "Bitmaps", () => bitmaps ??= new frmBitmaps(true) },
+            { "Binary LEDs", () => BinaryLEDs ??= new frmBinaryLEDs(true) },
             { "Blind Alley", () => blindAlley ??= new frmBlindAlley() },
             { "Button", () => button ??= new frmButton(true) },
             { "Complicated Wires", () => complicatedWires ??= new frmComplicatedWires(true) },
@@ -60,6 +61,7 @@ namespace KTANE_Assistant
         private static frmWhosOnFirst? whosOnFirst;
         private static frmAstrology? Astrology;
         private static frmBinaryLEDs? BinaryLEDs;
+        private static frmBitmaps bitmaps;
 
         public static Form? SelectForm(string module)
         {

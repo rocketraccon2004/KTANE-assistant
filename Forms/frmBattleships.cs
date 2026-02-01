@@ -1,5 +1,4 @@
 ﻿using KTANE_Assistant.Modules;
-using btn = System.Windows.Forms.Button;
 using Cell = KTANE_Assistant.Modules.Battleship.Cell;
 using System.Linq;
 using System.Diagnostics;
@@ -20,7 +19,7 @@ public partial class frmBattleships : BaseForm
     public frmBattleships(bool showButtons) : base(showButtons)
     {
         InitializeComponent();
-        foreach (btn button in tableLayoutPanel1.Controls)
+        foreach (UIButton button in tableLayoutPanel1.Controls)
         {
             button.BackColor = colours[0];
         }
@@ -71,7 +70,7 @@ public partial class frmBattleships : BaseForm
 
         Color[,] gridColors = new Color[5, 5];
 
-        foreach (btn b in tableLayoutPanel1.Controls)
+        foreach (UIButton b in tableLayoutPanel1.Controls)
         {
             int row = tableLayoutPanel1.GetRow(b);
             int column = tableLayoutPanel1.GetColumn(b);
@@ -127,7 +126,7 @@ public partial class frmBattleships : BaseForm
             }
         }
 
-        foreach (btn b in tableLayoutPanel1.Controls)
+        foreach (UIButton b in tableLayoutPanel1.Controls)
         {
             int row = tableLayoutPanel1.GetRow(b);
             int column = tableLayoutPanel1.GetColumn(b);
@@ -208,7 +207,7 @@ public partial class frmBattleships : BaseForm
 
     private void grid_button_click(object sender, EventArgs e)
     {
-        btn b = (btn)sender;
+        UIButton b = (UIButton)sender;
         int currentColor = colours.IndexOf(b.BackColor);
         try
         {

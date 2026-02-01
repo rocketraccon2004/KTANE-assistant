@@ -25,7 +25,7 @@ internal static class Program
         }
         else
         {
-            Utils.throwError("One of the forms is null");
+            throw new NullReferenceException();
         }
     }
 }
