@@ -3,7 +3,7 @@ using Button = System.Windows.Forms.Button;
 
 namespace KTANE_Assistant.Forms;
 #nullable enable
-public partial class frmMaze : Form
+public partial class frmMaze : BaseForm
 {
     private Maze? maze;
 
@@ -18,7 +18,7 @@ public partial class frmMaze : Form
     };
 
 
-    public frmMaze()
+    public frmMaze(bool showButtons) : base(showButtons)
     {
         InitializeComponent();
         UpdateForm();
@@ -279,7 +279,7 @@ public partial class frmMaze : Form
             markerRow + 1,
             markerColumn + 1
         );
-        var answerForm = new frmMazeAnswer(maze.Solve());
+        var answerForm = new frmMazeAnswer(maze.Solve(), false);
         Program.switchForm(answerForm);
 
         UpdateForm();

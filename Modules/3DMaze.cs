@@ -830,7 +830,7 @@ public class _3DMaze : Module
     /// <returns>the row the goal is in</returns>
     public int FindRow()
     {
-        int row = bomb.getFirstDigitOfSerial();
+        int row = bomb.getDigitOfSerial(1);
 
         foreach (var indicator in bomb.getUnlitIndicators())
             if (ValidIndicator(indicator, "MAZE GAMER"))

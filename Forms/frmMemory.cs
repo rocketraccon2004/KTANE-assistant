@@ -3,11 +3,11 @@ using System.Windows.Forms;
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frmMemory : Form
+public partial class frmMemory : BaseForm
 {
     private Memory module;
 
-    public frmMemory()
+    public frmMemory(bool showButtons) : base(showButtons)
     {
         InitializeComponent();
     }

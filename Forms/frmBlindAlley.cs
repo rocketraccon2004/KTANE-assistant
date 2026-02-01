@@ -46,4 +46,9 @@ public partial class frmBlindAlley : Form
         else
             button8.BackColor = Color.Red;
     }
+
+    private void btnBack_Click(object sender, EventArgs e)
+    {
+        Assistant.Instance.backButtonClicked();
+    }
 }

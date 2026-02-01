@@ -43,12 +43,12 @@ public class followTheLeader(string colours, string numbers) : Module
 
         numbersList = ReorderList(numbersList, start);
 
-        var startColour = coloursList[startIndex];
+        var startColor = coloursList[startIndex];
 
         coloursList = ReorderList(coloursList, startIndex);
 
-        currentInstruction = bomb.getFirstLetterInSerial();
-        reverse = startColour == "r" || startColour == "g" || startColour == "w";
+        currentInstruction = bomb.getLetterInSerial(1);
+        reverse = startColor == "r" || startColor == "g" || startColor == "w";
 
 
         foreach (var i in numbersList)
@@ -86,7 +86,7 @@ public class followTheLeader(string colours, string numbers) : Module
 
         if (numbersList.Contains(bomb.batteries)) return bomb.batteries;
 
-        if (numbersList.Contains(bomb.getFirstDigitOfSerial())) return bomb.getFirstDigitOfSerial();
+        if (numbersList.Contains(bomb.getDigitOfSerial(1))) return bomb.getDigitOfSerial(1);
 
         if (bomb.hasIndicator(IndicatorType.CLR, true)) return 1000;
 
@@ -101,9 +101,9 @@ public class followTheLeader(string colours, string numbers) : Module
         {
             case 'A':
             case 'N':
-                return getWireColourByIndex(index - 1) != "y" ||
-                       getWireColourByIndex(index - 1) != "g" ||
-                       getWireColourByIndex(index - 1) != "b";
+                return getWireColorByIndex(index - 1) != "y" ||
+                       getWireColorByIndex(index - 1) != "g" ||
+                       getWireColorByIndex(index - 1) != "b";
             case 'B':
             case 'O':
                 return !isOdd(wire);
@@ -112,26 +112,26 @@ public class followTheLeader(string colours, string numbers) : Module
                 return toCut.Contains(getWireNumberByIndex(index - 1));
             case 'D':
             case 'Q':
-                return getWireColourByIndex(index - 1) == "r" &&
-                       getWireColourByIndex(index - 1) == "blk" &&
-                       getWireColourByIndex(index - 1) == "b";
+                return getWireColorByIndex(index - 1) == "r" &&
+                       getWireColorByIndex(index - 1) == "blk" &&
+                       getWireColorByIndex(index - 1) == "b";
 
             case 'E':
             case 'R':
-                return getWireColourByIndex(index - 1) == getWireColourByIndex(index - 2) ||
-                       getWireColourByIndex(index - 1) == getWireColourByIndex(index - 3) ||
-                       getWireColourByIndex(index - 2) == getWireColourByIndex(index - 3);
+                return getWireColorByIndex(index - 1) == getWireColorByIndex(index - 2) ||
+                       getWireColorByIndex(index - 1) == getWireColorByIndex(index - 3) ||
+                       getWireColorByIndex(index - 2) == getWireColorByIndex(index - 3);
             case 'F':
             case 'S':
-                return (getWireColourByIndex(index) == getWireColourByIndex(index - 1) ||
-                        getWireColourByIndex(index) == getWireColourByIndex(index - 2)) &&
-                       !(getWireColourByIndex(index) == getWireColourByIndex(index - 1) &&
-                         getWireColourByIndex(index) == getWireColourByIndex(index - 2));
+                return (getWireColorByIndex(index) == getWireColorByIndex(index - 1) ||
+                        getWireColorByIndex(index) == getWireColorByIndex(index - 2)) &&
+                       !(getWireColorByIndex(index) == getWireColorByIndex(index - 1) &&
+                         getWireColorByIndex(index) == getWireColorByIndex(index - 2));
             case 'G':
             case 'T':
-                return getWireColourByIndex(index - 1) == "y" ||
-                       getWireColourByIndex(index - 1) == "w" ||
-                       getWireColourByIndex(index - 1) == "g";
+                return getWireColorByIndex(index - 1) == "y" ||
+                       getWireColorByIndex(index - 1) == "w" ||
+                       getWireColorByIndex(index - 1) == "g";
             case 'H':
             case 'U':
                 return !toCut.Contains(getWireNumberByIndex(index - 1));
@@ -140,19 +140,19 @@ public class followTheLeader(string colours, string numbers) : Module
                 return getWireNumberByIndex(index - 1) + 1 != wire;
             case 'J':
             case 'W':
-                return getWireColourByIndex(index - 1) != "blk" &&
-                       getWireColourByIndex(index - 1) != "w" &&
-                       getWireColourByIndex(index - 1) != "r";
+                return getWireColorByIndex(index - 1) != "blk" &&
+                       getWireColorByIndex(index - 1) != "w" &&
+                       getWireColorByIndex(index - 1) != "r";
             case 'K':
             case 'X':
-                return getWireColourByIndex(index - 1) != getWireColourByIndex(index - 2);
+                return getWireColorByIndex(index - 1) != getWireColorByIndex(index - 2);
             case 'L':
             case 'Y':
                 return wire > 6;
             case 'M':
             case 'Z':
-                var wire1 = getWireColourByIndex(index - 1);
-                var wire2 = getWireColourByIndex(index - 2);
+                var wire1 = getWireColorByIndex(index - 1);
+                var wire2 = getWireColorByIndex(index - 2);
                 if (areWiresUnique(wire1, wire2))
                 {
                     if ((wire1 == "blk" || wire1 == "w") && (wire1 == "blk" || wire1 == "w")) return false;
@@ -182,7 +182,7 @@ public class followTheLeader(string colours, string numbers) : Module
         return numbersList[index];
     }
 
-    private string getWireColourByIndex(int index)
+    private string getWireColorByIndex(int index)
     {
         var count = coloursList.Count;
 

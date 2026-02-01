@@ -11,7 +11,7 @@ public static class Utils
 
     public static Form getMainForm()
     {
-        if (main == null) main = new frmMain();
+        if (main == null) main = new frmMain(false);
         return main;
     }
     
@@ -33,5 +33,16 @@ public static class Utils
     public static int RNG(int min, int max)
     {
         return new Random().Next(min, max);
+    }
+
+    internal static Control getNextTB(TextBox tb, Form from)
+    {
+        var tabIndex = tb.TabIndex;
+        var controls = from.Controls.Cast<Control>().Where(r => r.TabIndex > tabIndex);
+        if (controls.Any())
+        {
+            return controls.OrderBy(r => r.TabIndex).First();
+        }
+        return null;
     }
 }

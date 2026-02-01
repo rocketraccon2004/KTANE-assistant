@@ -2,29 +2,29 @@
 
 public class Button : Module
 {
-    private string Colour;
+    private string Color;
     private string Label;
 
-    public Button(string Colour, string Label)
+    public Button(string Color, string Label)
     {
-        this.Colour = Colour;
+        this.Color = Color;
         this.Label = Label;
     }
 
     public void Solve()
     {
-        if ((Colour == "Blue") & (Label == "Abort"))
+        if ((Color == "Blue") & (Label == "Abort"))
             holdButton();
         else if ((Assistant.Instance.Bomb.batteries > 1) & (Label == "Detonate"))
             pressAndReleaseButton();
-        else if ((Colour == "White") & bomb.hasIndicator(IndicatorType.CAR, true))
+        else if ((Color == "White") & bomb.hasIndicator(IndicatorType.CAR, true))
             holdButton();
-        else if (Colour == "Yellow")
+        else if (Color == "Yellow")
             holdButton();
         else if (Assistant.Instance.Bomb.batteries > 2 &&
                  bomb.hasIndicator(IndicatorType.FRK, true))
             pressAndReleaseButton();
-        else if ((Colour == "Red") & (Label == "Hold"))
+        else if ((Color == "Red") & (Label == "Hold"))
             pressAndReleaseButton();
         else
             holdButton();

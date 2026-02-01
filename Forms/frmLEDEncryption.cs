@@ -2,9 +2,9 @@
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frmLEDEncryption : Form
+public partial class frmLEDEncryption : BaseForm
 {
-    public frmLEDEncryption()
+    public frmLEDEncryption(bool showButtons) : base(showButtons)
     {
         InitializeComponent();
     }

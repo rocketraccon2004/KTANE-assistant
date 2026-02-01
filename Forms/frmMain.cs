@@ -3,9 +3,9 @@ using Newtonsoft.Json;
 namespace KTANE_Assistant.Forms;
 
 #pragma warning disable CS8604 // Possible null reference argument.
-public partial class frmMain : Form
+public partial class frmMain : BaseForm
 {
-    public frmMain()
+    public frmMain(bool showButtons) : base(showButtons)
     {
         InitializeComponent();
     }
@@ -32,7 +32,7 @@ public partial class frmMain : Form
     {
         setButtonText(0);
     }
-     
+
 
     private void btnHN_Click(object sender, EventArgs e)
     {
@@ -85,5 +85,10 @@ public partial class frmMain : Form
                 button.Visible = false;
             }
         }
+    }
+
+    private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+    {
+        Assistant.Instance.formClosed(e);
     }
 }

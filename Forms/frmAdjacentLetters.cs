@@ -2,11 +2,11 @@
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frmAdjacentLetters : Form
+public partial class frmAdjacentLetters : BaseForm
 {
     private AdjacentLetters module;
 
-    public frmAdjacentLetters()
+    public frmAdjacentLetters(bool showButtons) : base(showButtons)
     {
         module = new AdjacentLetters();
         InitializeComponent();
@@ -34,13 +34,7 @@ public partial class frmAdjacentLetters : Form
 
     private void TextBox_TextChanged(object sender, EventArgs e)
     {
-        TextBox tb = (TextBox)sender;
-        var tabIndex = tb.TabIndex;
-        var controls = tableLayoutPanel1.Controls.Cast<Control>().Where(r => r.TabIndex > tabIndex);
-        if (controls.Any())
-        {
-            controls.OrderBy(r => r.TabIndex).First().Select();
-        }
+        Utils.getNextTB((TextBox)sender, this).Select();
     }
 
     private void btnReset_Click(object sender, EventArgs e)

@@ -281,7 +281,7 @@ public class AdventureGame : Module
             case Item.Ticket:
                 return ticketHeight() && gravity <= 9.2f && gravity < 10.4f;
             case Item.Trophy:
-                return STR > bomb.getFirstDigitOfSerial() || toFight == Troll;
+                return STR > bomb.getDigitOfSerial(1) || toFight == Troll;
             default:
                 throw new Exception($"Unknown Item: {item.ToString()}");
         }

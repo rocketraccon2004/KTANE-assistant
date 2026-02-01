@@ -3,7 +3,7 @@ using KTANE_Assistant.Modules;
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frmMazeAnswer : Form
+public partial class frmMazeAnswer : BaseForm
 {
     private List<Maze.Coordinate> correctSpots;
     private Image downArrowImage = Image.FromFile("Resources/Maze/down arrow.png");
@@ -12,7 +12,7 @@ public partial class frmMazeAnswer : Form
     private Image rightArrowImage = Image.FromFile("Resources/Maze/right arrow.png");
     private Image upArrowImage = Image.FromFile("Resources/Maze/up arrow.png");
 
-    public frmMazeAnswer(List<Maze.Coordinate> correctSpots)
+    public frmMazeAnswer(List<Maze.Coordinate> correctSpots, bool showButtons) : base(showButtons)
     {
         InitializeComponent();
 

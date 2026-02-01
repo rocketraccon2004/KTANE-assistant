@@ -2,16 +2,16 @@
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frmFollowTheLeader : Form
+public partial class frmFollowTheLeader : BaseForm
 {
-    public frmFollowTheLeader()
+    public frmFollowTheLeader(bool showButtons) : base(showButtons)
     {
         InitializeComponent();
     }
 
     private void btnSolve_Click(object sender, EventArgs e)
     {
-        var module = new followTheLeader(txtColours.Text, txtNumbers.Text);
+        var module = new followTheLeader(txtColors.Text, txtNumbers.Text);
         module.Solve();
     }
 

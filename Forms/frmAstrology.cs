@@ -2,11 +2,11 @@
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frmAstrology : Form
+public partial class frmAstrology : BaseForm
 {
     public Astrology module;
 
-    public frmAstrology()
+    public frmAstrology(bool showButtons) : base(showButtons)
     {
         InitializeComponent();
     }
@@ -38,19 +38,19 @@ public partial class frmAstrology : Form
 
     private void btnElement_Click(object sender, EventArgs e)
     {
-        frmAstrologyElement form = new frmAstrologyElement();
+        frmAstrologyElement form = new frmAstrologyElement(false);
         form.selectElement(this);
     }
 
     private void btnBody_Click(object sender, EventArgs e)
     {
-        frmAstrologyBody form = new frmAstrologyBody();
+        frmAstrologyBody form = new frmAstrologyBody(false);
         form.selectBody(this);
     }
 
     private void btnZodiac_Click(object sender, EventArgs e)
     {
-        frmAstrologyZodiac form = new frmAstrologyZodiac();
+        frmAstrologyZodiac form = new frmAstrologyZodiac(false);
         form.selectZodiac(this);
     }
 

@@ -35,8 +35,11 @@ partial class frmMemory
         txtDisplay = new TextBox();
         btnReset = new Button();
         lblRound = new Label();
-        btnBack1 = new Button();
         SuspendLayout();
+        // 
+        // btnSolve
+        // 
+        btnSolve.Click += btnSolve_Click;
         // 
         // txtNum1
         // 
@@ -96,7 +99,7 @@ partial class frmMemory
         // btnReset
         // 
         btnReset.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-        btnReset.Location = new Point(267, 244);
+        btnReset.Location = new Point(507, 228);
         btnReset.Name = "btnReset";
         btnReset.Size = new Size(156, 63);
         btnReset.TabIndex = 82;
@@ -115,23 +118,11 @@ partial class frmMemory
         lblRound.Text = "label1";
         lblRound.TextAlign = ContentAlignment.TopCenter;
         // 
-        // btnBack1
-        // 
-        btnBack1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-        btnBack1.Location = new Point(105, 244);
-        btnBack1.Name = "btnBack1";
-        btnBack1.Size = new Size(156, 63);
-        btnBack1.TabIndex = 85;
-        btnBack1.Text = "Back";
-        btnBack1.UseVisualStyleBackColor = true;
-        btnBack1.Click += btnBack_Click;
-        // 
         // frmMemory
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(536, 334);
-        Controls.Add(btnBack1);
+        ClientSize = new Size(675, 313);
         Controls.Add(lblRound);
         Controls.Add(btnReset);
         Controls.Add(txtDisplay);
@@ -143,6 +134,9 @@ partial class frmMemory
         Name = "frmMemory";
         Text = "Memory";
         Load += frmMemory_Load;
+        Controls.SetChildIndex(btnSolve, 0);
+        Controls.SetChildIndex(btnStrike, 0);
+        Controls.SetChildIndex(btnBack, 0);
         Controls.SetChildIndex(txtNum1, 0);
         Controls.SetChildIndex(txtNum2, 0);
         Controls.SetChildIndex(txtNum3, 0);
@@ -150,7 +144,6 @@ partial class frmMemory
         Controls.SetChildIndex(txtDisplay, 0);
         Controls.SetChildIndex(btnReset, 0);
         Controls.SetChildIndex(lblRound, 0);
-        Controls.SetChildIndex(btnBack1, 0);
         ResumeLayout(false);
         PerformLayout();
     }
@@ -163,5 +156,4 @@ partial class frmMemory
     private TextBox txtDisplay;
     private Button btnReset;
     private Label lblRound;
-    private Button btnBack1;
 }

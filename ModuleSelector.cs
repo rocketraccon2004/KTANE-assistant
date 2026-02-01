@@ -1,4 +1,5 @@
 ﻿using KTANE_Assistant.Forms;
+using KTANE_Assistant.Modules;
 
 namespace KTANE_Assistant
 {
@@ -6,30 +7,31 @@ namespace KTANE_Assistant
     {
         public static readonly Dictionary<string, Func<Form>> ModuleFactories = new()
         {
-            { "3D Maze", () =>  dMaze ??= new frm3dMaze()},
-            { "Adjacent Letters", () => adjacentLetters ??= new frmAdjacentLetters() },
-            { "Adventure Game", () => adventureGame ??= new frmAdventureGame() },
-            { "Alphabet", () => alphabet ??= new frmAlphabet() },
-            { "Anagrams", () => anagrams ??= new frmAnagrams() },
-            { "Astrology", () => Astrology ??= new frmAstrology() },
-            { "Binary LEDs", () => BinaryLEDs ??= new frmBinaryLEDs() },
+            { "3D Maze", () =>  dMaze ??= new frm3dMaze(true)},
+            { "Adjacent Letters", () => adjacentLetters ??= new frmAdjacentLetters(true) },
+            { "Adventure Game", () => adventureGame ??= new frmAdventureGame(true) },
+            { "Alphabet", () => alphabet ??= new frmAlphabet(true) },
+            { "Anagrams", () => anagrams ??= new frmAnagrams(true) },
+            { "Astrology", () => Astrology ??= new frmAstrology(true) },
+            { "Battleship", () => battleship ??= new frmBattleships(true) },
+            { "Binary LEDs", () => BinaryLEDs ??= new frmBinaryLEDs(false) },
             { "Blind Alley", () => blindAlley ??= new frmBlindAlley() },
-            { "Button", () => button ??= new frmButton() },
-            { "Complicated Wires", () => complicatedWires ??= new frmComplicatedWires() },
-            { "Colour Flash", () => colourFlash ??= new frmColourFlash() },
-            { "Edgework Input", () => edgeworkInput ??= new frmEdgeworkInput() },
-            { "Follow the Leader", () => followTheLeader ??= new frmFollowTheLeader() },
-            { "Keypads", () => keypads ??= new frmKeypads() },
-            { "Knobs", () => knob ??= new frmKnob() },
-            { "LED Encryption", () => LEDEncryption ??= new frmLEDEncryption() },
-            { "Maze", () => maze ??= new frmMaze() },
-            { "Memory", () => memory ??= new frmMemory() },
-            { "Password", () => password ??= new frmPassword() },
-            { "Simon Says", () => simonSays ??= new frmSimon() },
-            { "Wires", () => wires ??= new frmWires() },
-            { "Wire Sequences", () => wireSequences ??= new frmWireSequences() },
-            { "Skewed Slots", () => skewedSlots ??= new frmSkewedSlots() },
-            { "Who's On First", () => whosOnFirst ??= new frmWhosOnFirst() }
+            { "Button", () => button ??= new frmButton(true) },
+            { "Complicated Wires", () => complicatedWires ??= new frmComplicatedWires(true) },
+            { "Color Flash", () => colourFlash ??= new frmColorFlash(true) },
+            { "Edgework Input", () => edgeworkInput ??= new frmEdgeworkInput(false) },
+            { "Follow the Leader", () => followTheLeader ??= new frmFollowTheLeader(true) },
+            { "Keypads", () => keypads ??= new frmKeypads(true) },
+            { "Knobs", () => knob ??= new frmKnob(true) },
+            { "LED Encryption", () => LEDEncryption ??= new frmLEDEncryption(true) },
+            { "Maze", () => maze ??= new frmMaze(true) },
+            { "Memory", () => memory ??= new frmMemory(true) },
+            { "Passwords", () => password ??= new frmPassword(true) },
+            { "Simon Says", () => simonSays ??= new frmSimon(true) },
+            { "Wires", () => wires ??= new frmWires(true) },
+            { "Wire Sequences", () => wireSequences ??= new frmWireSequences(true) },
+            { "Skewed Slots", () => skewedSlots ??= new frmSkewedSlots(true) },
+            { "Who's On First", () => whosOnFirst ??= new frmWhosOnFirst(true) }
         };
 
         // Cached Instances
@@ -38,10 +40,11 @@ namespace KTANE_Assistant
         private static frmAdventureGame? adventureGame;
         private static frmAlphabet? alphabet;
         private static frmAnagrams? anagrams;
+        private static frmBattleships? battleship;
         private static frmBlindAlley? blindAlley;
         private static frmButton? button;
         private static frmComplicatedWires? complicatedWires;
-        private static frmColourFlash? colourFlash;
+        private static frmColorFlash? colourFlash;
         private static frmEdgeworkInput? edgeworkInput;
         private static frmFollowTheLeader? followTheLeader;
         private static frmKeypads? keypads;

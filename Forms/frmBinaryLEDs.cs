@@ -12,11 +12,11 @@ using Button = System.Windows.Forms.Button;
 
 namespace KTANE_Assistant.Forms
 {
-    public partial class frmBinaryLEDs : Form
+    public partial class frmBinaryLEDs : BaseForm
     {
         BinaryLEDs module;
 
-        public frmBinaryLEDs()
+        public frmBinaryLEDs(bool showButtons) : base(showButtons)
         {
             InitializeComponent();
         }

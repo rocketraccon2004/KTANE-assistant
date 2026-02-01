@@ -31,211 +31,200 @@ partial class frmWires
     /// </summary>
     private void InitializeComponent()
     {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(44, 61);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 29);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Wire 1:";
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(44, 118);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 29);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Wire 2:";
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(44, 159);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 29);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Wire 3:";
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(44, 208);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 29);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Wire 4:";
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(44, 256);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 29);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Wire 5:";
-            // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(44, 305);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(112, 29);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Wire 6:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "",
-            "Black",
-            "Blue",
-            "Red",
-            "White",
-            "Yellow"});
-            this.comboBox1.Location = new System.Drawing.Point(144, 58);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(186, 37);
-            this.comboBox1.TabIndex = 7;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "",
-            "Black",
-            "Blue",
-            "Red",
-            "White",
-            "Yellow"});
-            this.comboBox2.Location = new System.Drawing.Point(144, 106);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(186, 37);
-            this.comboBox2.TabIndex = 8;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "",
-            "Black",
-            "Blue",
-            "Red",
-            "White",
-            "Yellow"});
-            this.comboBox3.Location = new System.Drawing.Point(144, 155);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(186, 37);
-            this.comboBox3.TabIndex = 9;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "",
-            "Black",
-            "Blue",
-            "Red",
-            "White",
-            "Yellow"});
-            this.comboBox4.Location = new System.Drawing.Point(144, 204);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(186, 37);
-            this.comboBox4.TabIndex = 10;
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "",
-            "Black",
-            "Blue",
-            "Red",
-            "White",
-            "Yellow"});
-            this.comboBox5.Location = new System.Drawing.Point(144, 252);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(186, 37);
-            this.comboBox5.TabIndex = 11;
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
-            "",
-            "Black",
-            "Blue",
-            "Red",
-            "White",
-            "Yellow"});
-            this.comboBox6.Location = new System.Drawing.Point(144, 301);
-            this.comboBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(186, 37);
-            this.comboBox6.TabIndex = 12;
-            // 
-            // frmWires
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(613, 560);
-            this.Controls.Add(this.comboBox6);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmWires";
-            this.Text = "Wires";
-            this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.label4, 0);
-            this.Controls.SetChildIndex(this.label5, 0);
-            this.Controls.SetChildIndex(this.label6, 0);
-            this.Controls.SetChildIndex(this.comboBox1, 0);
-            this.Controls.SetChildIndex(this.comboBox2, 0);
-            this.Controls.SetChildIndex(this.comboBox3, 0);
-            this.Controls.SetChildIndex(this.comboBox4, 0);
-            this.Controls.SetChildIndex(this.comboBox5, 0);
-            this.Controls.SetChildIndex(this.comboBox6, 0);
-            this.ResumeLayout(false);
+        label1 = new Label();
+        label2 = new Label();
+        label3 = new Label();
+        label4 = new Label();
+        label5 = new Label();
+        label6 = new Label();
+        comboBox1 = new ComboBox();
+        comboBox2 = new ComboBox();
+        comboBox3 = new ComboBox();
+        comboBox4 = new ComboBox();
+        comboBox5 = new ComboBox();
+        comboBox6 = new ComboBox();
+        SuspendLayout();
+        // 
+        // btnBack
+        // 
+        btnBack.Location = new Point(291, 294);
+        btnBack.Size = new Size(123, 48);
+        // 
+        // btnStrike
+        // 
+        btnStrike.Location = new Point(149, 294);
+        btnStrike.Size = new Size(123, 48);
+        // 
+        // btnSolve
+        // 
+        btnSolve.Location = new Point(11, 294);
+        btnSolve.Size = new Size(123, 48);
+        btnSolve.Click += btnSolve_Click;
+        // 
+        // label1
+        // 
+        label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        label1.Location = new Point(34, 46);
+        label1.Margin = new Padding(2, 0, 2, 0);
+        label1.Name = "label1";
+        label1.Size = new Size(87, 22);
+        label1.TabIndex = 1;
+        label1.Text = "Wire 1:";
+        // 
+        // label2
+        // 
+        label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        label2.Location = new Point(34, 88);
+        label2.Margin = new Padding(2, 0, 2, 0);
+        label2.Name = "label2";
+        label2.Size = new Size(87, 22);
+        label2.TabIndex = 2;
+        label2.Text = "Wire 2:";
+        // 
+        // label3
+        // 
+        label3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        label3.Location = new Point(34, 119);
+        label3.Margin = new Padding(2, 0, 2, 0);
+        label3.Name = "label3";
+        label3.Size = new Size(87, 22);
+        label3.TabIndex = 3;
+        label3.Text = "Wire 3:";
+        // 
+        // label4
+        // 
+        label4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        label4.Location = new Point(34, 156);
+        label4.Margin = new Padding(2, 0, 2, 0);
+        label4.Name = "label4";
+        label4.Size = new Size(87, 22);
+        label4.TabIndex = 4;
+        label4.Text = "Wire 4:";
+        // 
+        // label5
+        // 
+        label5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        label5.Location = new Point(34, 192);
+        label5.Margin = new Padding(2, 0, 2, 0);
+        label5.Name = "label5";
+        label5.Size = new Size(87, 22);
+        label5.TabIndex = 5;
+        label5.Text = "Wire 5:";
+        // 
+        // label6
+        // 
+        label6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        label6.Location = new Point(34, 229);
+        label6.Margin = new Padding(2, 0, 2, 0);
+        label6.Name = "label6";
+        label6.Size = new Size(87, 22);
+        label6.TabIndex = 6;
+        label6.Text = "Wire 6:";
+        // 
+        // comboBox1
+        // 
+        comboBox1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        comboBox1.FormattingEnabled = true;
+        comboBox1.Items.AddRange(new object[] { "", "Black", "Blue", "Red", "White", "Yellow" });
+        comboBox1.Location = new Point(112, 44);
+        comboBox1.Margin = new Padding(2, 3, 2, 3);
+        comboBox1.Name = "comboBox1";
+        comboBox1.Size = new Size(146, 28);
+        comboBox1.TabIndex = 7;
+        // 
+        // comboBox2
+        // 
+        comboBox2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        comboBox2.FormattingEnabled = true;
+        comboBox2.Items.AddRange(new object[] { "", "Black", "Blue", "Red", "White", "Yellow" });
+        comboBox2.Location = new Point(112, 80);
+        comboBox2.Margin = new Padding(2, 3, 2, 3);
+        comboBox2.Name = "comboBox2";
+        comboBox2.Size = new Size(146, 28);
+        comboBox2.TabIndex = 8;
+        // 
+        // comboBox3
+        // 
+        comboBox3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        comboBox3.FormattingEnabled = true;
+        comboBox3.Items.AddRange(new object[] { "", "Black", "Blue", "Red", "White", "Yellow" });
+        comboBox3.Location = new Point(112, 116);
+        comboBox3.Margin = new Padding(2, 3, 2, 3);
+        comboBox3.Name = "comboBox3";
+        comboBox3.Size = new Size(146, 28);
+        comboBox3.TabIndex = 9;
+        // 
+        // comboBox4
+        // 
+        comboBox4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        comboBox4.FormattingEnabled = true;
+        comboBox4.Items.AddRange(new object[] { "", "Black", "Blue", "Red", "White", "Yellow" });
+        comboBox4.Location = new Point(112, 153);
+        comboBox4.Margin = new Padding(2, 3, 2, 3);
+        comboBox4.Name = "comboBox4";
+        comboBox4.Size = new Size(146, 28);
+        comboBox4.TabIndex = 10;
+        // 
+        // comboBox5
+        // 
+        comboBox5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        comboBox5.FormattingEnabled = true;
+        comboBox5.Items.AddRange(new object[] { "", "Black", "Blue", "Red", "White", "Yellow" });
+        comboBox5.Location = new Point(112, 189);
+        comboBox5.Margin = new Padding(2, 3, 2, 3);
+        comboBox5.Name = "comboBox5";
+        comboBox5.Size = new Size(146, 28);
+        comboBox5.TabIndex = 11;
+        // 
+        // comboBox6
+        // 
+        comboBox6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        comboBox6.FormattingEnabled = true;
+        comboBox6.Items.AddRange(new object[] { "", "Black", "Blue", "Red", "White", "Yellow" });
+        comboBox6.Location = new Point(112, 226);
+        comboBox6.Margin = new Padding(2, 3, 2, 3);
+        comboBox6.Name = "comboBox6";
+        comboBox6.Size = new Size(146, 28);
+        comboBox6.TabIndex = 12;
+        // 
+        // frmWires
+        // 
+        AutoScaleDimensions = new SizeF(7F, 15F);
+        AutoScaleMode = AutoScaleMode.Font;
+        AutoSize = true;
+        AutoSizeMode = AutoSizeMode.GrowAndShrink;
+        ClientSize = new Size(436, 357);
+        Controls.Add(comboBox6);
+        Controls.Add(comboBox5);
+        Controls.Add(comboBox4);
+        Controls.Add(comboBox3);
+        Controls.Add(comboBox2);
+        Controls.Add(comboBox1);
+        Controls.Add(label6);
+        Controls.Add(label5);
+        Controls.Add(label4);
+        Controls.Add(label3);
+        Controls.Add(label2);
+        Controls.Add(label1);
+        Margin = new Padding(2, 3, 2, 3);
+        Name = "frmWires";
+        Text = "Wires";
+        Controls.SetChildIndex(btnSolve, 0);
+        Controls.SetChildIndex(btnStrike, 0);
+        Controls.SetChildIndex(btnBack, 0);
+        Controls.SetChildIndex(label1, 0);
+        Controls.SetChildIndex(label2, 0);
+        Controls.SetChildIndex(label3, 0);
+        Controls.SetChildIndex(label4, 0);
+        Controls.SetChildIndex(label5, 0);
+        Controls.SetChildIndex(label6, 0);
+        Controls.SetChildIndex(comboBox1, 0);
+        Controls.SetChildIndex(comboBox2, 0);
+        Controls.SetChildIndex(comboBox3, 0);
+        Controls.SetChildIndex(comboBox4, 0);
+        Controls.SetChildIndex(comboBox5, 0);
+        Controls.SetChildIndex(comboBox6, 0);
+        ResumeLayout(false);
 
     }
 

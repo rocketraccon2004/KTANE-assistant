@@ -1,6 +1,6 @@
 ﻿namespace KTANE_Assistant.Forms;
 
-public partial class frmAnagrams : Form
+public partial class frmAnagrams : BaseForm
 {
     private static readonly List<List<string>> Words = new()
     {
@@ -14,7 +14,7 @@ public partial class frmAnagrams : Form
         new List<string> {"duster", "rusted", "rudest"}
     };
 
-    public frmAnagrams()
+    public frmAnagrams(bool showButtons) : base(showButtons)
     {
         InitializeComponent();
     }

@@ -28,108 +28,109 @@ partial class frmWhosOnFirst
     /// </summary>
     private void InitializeComponent()
     {
-        this.btnSubmit1 = new System.Windows.Forms.Button();
-        this.lblPosition = new System.Windows.Forms.Label();
-        this.btnSubmit2 = new System.Windows.Forms.Button();
-        this.txtWord1 = new System.Windows.Forms.TextBox();
-        this.txtWord2 = new System.Windows.Forms.TextBox();
-        this.txtSolution = new System.Windows.Forms.TextBox();
-        this.SuspendLayout();
+        btnSubmit1 = new Button();
+        lblPosition = new Label();
+        txtWord1 = new TextBox();
+        txtWord2 = new TextBox();
+        txtSolution = new TextBox();
+        SuspendLayout();
+        // 
+        // btnBack
+        // 
+        btnBack.Location = new Point(213, 427);
+        // 
+        // btnStrike
+        // 
+        btnStrike.Location = new Point(41, 427);
+        // 
+        // btnSolve
+        // 
+        btnSolve.Location = new Point(275, 126);
+        btnSolve.Size = new Size(136, 47);
+        btnSolve.Click += btnSolve_Click;
         // 
         // btnSubmit1
         // 
-        this.btnSubmit1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        this.btnSubmit1.Location = new System.Drawing.Point(314, 48);
-        this.btnSubmit1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-        this.btnSubmit1.Name = "btnSubmit1";
-        this.btnSubmit1.Size = new System.Drawing.Size(156, 50);
-        this.btnSubmit1.TabIndex = 77;
-        this.btnSubmit1.Text = "Submit";
-        this.btnSubmit1.UseVisualStyleBackColor = true;
-        this.btnSubmit1.Click += new System.EventHandler(this.btnSubmit1_Click);
+        btnSubmit1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        btnSubmit1.Location = new Point(275, 45);
+        btnSubmit1.Margin = new Padding(4, 3, 4, 3);
+        btnSubmit1.Name = "btnSubmit1";
+        btnSubmit1.Size = new Size(136, 47);
+        btnSubmit1.TabIndex = 77;
+        btnSubmit1.Text = "Submit";
+        btnSubmit1.UseVisualStyleBackColor = true;
+        btnSubmit1.Click += btnSubmit1_Click;
         // 
         // lblPosition
         // 
-        this.lblPosition.AutoSize = true;
-        this.lblPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        this.lblPosition.Location = new System.Drawing.Point(28, 214);
-        this.lblPosition.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-        this.lblPosition.Name = "lblPosition";
-        this.lblPosition.Size = new System.Drawing.Size(0, 25);
-        this.lblPosition.TabIndex = 78;
-        // 
-        // btnSubmit2
-        // 
-        this.btnSubmit2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        this.btnSubmit2.Location = new System.Drawing.Point(314, 244);
-        this.btnSubmit2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-        this.btnSubmit2.Name = "btnSubmit2";
-        this.btnSubmit2.Size = new System.Drawing.Size(156, 50);
-        this.btnSubmit2.TabIndex = 79;
-        this.btnSubmit2.Text = "  ";
-        this.btnSubmit2.UseVisualStyleBackColor = true;
-        this.btnSubmit2.Click += new System.EventHandler(this.btnSubmit2_Click);
+        lblPosition.AutoSize = true;
+        lblPosition.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        lblPosition.Location = new Point(24, 201);
+        lblPosition.Margin = new Padding(4, 0, 4, 0);
+        lblPosition.Name = "lblPosition";
+        lblPosition.Size = new Size(0, 20);
+        lblPosition.TabIndex = 78;
         // 
         // txtWord1
         // 
-        this.txtWord1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        this.txtWord1.Location = new System.Drawing.Point(124, 64);
-        this.txtWord1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-        this.txtWord1.Name = "txtWord1";
-        this.txtWord1.Size = new System.Drawing.Size(184, 30);
-        this.txtWord1.TabIndex = 80;
+        txtWord1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        txtWord1.Location = new Point(108, 60);
+        txtWord1.Margin = new Padding(4, 3, 4, 3);
+        txtWord1.Name = "txtWord1";
+        txtWord1.Size = new Size(162, 26);
+        txtWord1.TabIndex = 80;
         // 
         // txtWord2
         // 
-        this.txtWord2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        this.txtWord2.Location = new System.Drawing.Point(124, 253);
-        this.txtWord2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-        this.txtWord2.Name = "txtWord2";
-        this.txtWord2.Size = new System.Drawing.Size(184, 30);
-        this.txtWord2.TabIndex = 81;
+        txtWord2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        txtWord2.Location = new Point(108, 136);
+        txtWord2.Margin = new Padding(4, 3, 4, 3);
+        txtWord2.Name = "txtWord2";
+        txtWord2.Size = new Size(162, 26);
+        txtWord2.TabIndex = 81;
         // 
         // txtSolution
         // 
-        this.txtSolution.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        this.txtSolution.Location = new System.Drawing.Point(9, 354);
-        this.txtSolution.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-        this.txtSolution.Multiline = true;
-        this.txtSolution.Name = "txtSolution";
-        this.txtSolution.ReadOnly = true;
-        this.txtSolution.Size = new System.Drawing.Size(460, 239);
-        this.txtSolution.TabIndex = 82;
+        txtSolution.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        txtSolution.Location = new Point(13, 198);
+        txtSolution.Margin = new Padding(4, 3, 4, 3);
+        txtSolution.Multiline = true;
+        txtSolution.Name = "txtSolution";
+        txtSolution.ReadOnly = true;
+        txtSolution.Size = new Size(403, 224);
+        txtSolution.TabIndex = 82;
         // 
         // frmWhosOnFirst
         // 
-        this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-        this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        this.AutoSize = true;
-        this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-        this.ClientSize = new System.Drawing.Size(489, 672);
-        this.Controls.Add(this.txtSolution);
-        this.Controls.Add(this.txtWord2);
-        this.Controls.Add(this.txtWord1);
-        this.Controls.Add(this.btnSubmit2);
-        this.Controls.Add(this.lblPosition);
-        this.Controls.Add(this.btnSubmit1);
-        this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-        this.Name = "frmWhosOnFirst";
-        this.Text = "Who\'s on first";
-        this.Load += new System.EventHandler(this.frmWhosOnFirst_Load);
-        this.Controls.SetChildIndex(this.btnSubmit1, 0);
-        this.Controls.SetChildIndex(this.lblPosition, 0);
-        this.Controls.SetChildIndex(this.btnSubmit2, 0);
-        this.Controls.SetChildIndex(this.txtWord1, 0);
-        this.Controls.SetChildIndex(this.txtWord2, 0);
-        this.Controls.SetChildIndex(this.txtSolution, 0);
-        this.ResumeLayout(false);
-        this.PerformLayout();
+        AutoScaleDimensions = new SizeF(7F, 15F);
+        AutoScaleMode = AutoScaleMode.Font;
+        AutoSize = true;
+        AutoSizeMode = AutoSizeMode.GrowAndShrink;
+        ClientSize = new Size(428, 502);
+        Controls.Add(txtSolution);
+        Controls.Add(txtWord2);
+        Controls.Add(txtWord1);
+        Controls.Add(lblPosition);
+        Controls.Add(btnSubmit1);
+        Margin = new Padding(4, 3, 4, 3);
+        Name = "frmWhosOnFirst";
+        Text = "Who's on first";
+        Load += frmWhosOnFirst_Load;
+        Controls.SetChildIndex(btnSubmit1, 0);
+        Controls.SetChildIndex(lblPosition, 0);
+        Controls.SetChildIndex(txtWord1, 0);
+        Controls.SetChildIndex(txtWord2, 0);
+        Controls.SetChildIndex(txtSolution, 0);
+        Controls.SetChildIndex(btnSolve, 0);
+        Controls.SetChildIndex(btnStrike, 0);
+        Controls.SetChildIndex(btnBack, 0);
+        ResumeLayout(false);
+        PerformLayout();
     }
 
     #endregion
     private System.Windows.Forms.Button btnSubmit1;
     private Label lblPosition;
-    private System.Windows.Forms.Button btnSubmit2;
     private TextBox txtWord1;
     private TextBox txtWord2;
     private TextBox txtSolution;

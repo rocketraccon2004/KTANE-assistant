@@ -3,11 +3,8 @@ namespace KTANE_Assistant.Modules;
 
 
 //Todo: Rewrite this
-public class ColourFlash(List<string> words, List<string> colours) : Module
+public class ColorFlash(List<string> words, List<string> colours) : Module
 {
-    private List<string> colours = colours;
-    private List<string> words = words;
-
     public void Solve()
     {
         switch (colours[7])
@@ -46,7 +43,7 @@ public class ColourFlash(List<string> words, List<string> colours) : Module
     {
         if (CountWord("Green") >= 3) return "Press yes on third word green";
 
-        if (CountColour("Blue") == 1) return "Press no when word magenta shown";
+        if (CountColor("Blue") == 1) return "Press no when word magenta shown";
 
         return "Press yes on last white word or colour";
     }
@@ -70,13 +67,13 @@ public class ColourFlash(List<string> words, List<string> colours) : Module
     private string SolveGreen()
     {
         var previousWord = string.Empty;
-        var previousColour = string.Empty;
+        var previousColor = string.Empty;
 
         for (var i = 0; i < words.Count; i++)
         {
-            if ((words[i] == previousWord) & (colours[i] != previousColour))
+            if ((words[i] == previousWord) & (colours[i] != previousColor))
                 return "Press no on the fifth entry in the sequence.";
-            previousColour = colours[i];
+            previousColor = colours[i];
             previousWord = words[i];
         }
 
@@ -106,17 +103,17 @@ public class ColourFlash(List<string> words, List<string> colours) : Module
 
     private string SolveMagenta()
     {
-        var previousColour = string.Empty;
+        var previousColor = string.Empty;
         var previousWord = string.Empty;
         for (var i = 0; i < colours.Count; i++)
         {
-            if ((colours[i] == previousColour) & (words[i] != previousWord))
+            if ((colours[i] == previousColor) & (words[i] != previousWord))
                 return "press Yes on the third entry in the sequence.";
             previousWord = words[i];
-            previousColour = colours[i];
+            previousColor = colours[i];
         }
 
-        if (CountWord("Yellow") > CountColour("Blue"))
+        if (CountWord("Yellow") > CountColor("Blue"))
             return "press No the last time the word Yellow is in the sequence.";
 
         return
@@ -145,7 +142,7 @@ public class ColourFlash(List<string> words, List<string> colours) : Module
         return count;
     }
 
-    private int CountColour(string colour)
+    private int CountColor(string colour)
     {
         var count = 0;
         foreach (var s in colours)

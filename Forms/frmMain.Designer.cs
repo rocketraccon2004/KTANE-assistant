@@ -674,17 +674,10 @@ partial class frmMain
         Controls.Add(tableLayoutPanel1);
         Controls.Add(btnSaveEdgework);
         Controls.Add(btnChangeEdgework);
-        Margin = new Padding(3);
         Name = "frmMain";
         Text = "KTANE Assistant";
+        FormClosing += frmMain_FormClosing;
         Load += frmMain_Load;
-        Controls.SetChildIndex(btnChangeEdgework, 0);
-        Controls.SetChildIndex(btnSaveEdgework, 0);
-        Controls.SetChildIndex(tableLayoutPanel1, 0);
-        Controls.SetChildIndex(btnAG, 0);
-        Controls.SetChildIndex(btnHN, 0);
-        Controls.SetChildIndex(btnOU, 0);
-        Controls.SetChildIndex(btnVZ, 0);
         tableLayoutPanel1.ResumeLayout(false);
         tableLayoutPanel1.PerformLayout();
         ResumeLayout(false);

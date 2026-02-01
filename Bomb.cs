@@ -2,6 +2,8 @@
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
 #nullable enable
 
+using System;
+
 namespace KTANE_Assistant;
 
 public class Bomb
@@ -12,16 +14,47 @@ public class Bomb
     public List<Indicator> indicators;
     public Plate[] plates;
     public string serial;
+    List<int> digitsInSerial => getDigitsInSerial();
+    List<char> lettersInSerial => getLettersInSerial();
+
+    private List<char> getLettersInSerial()
+    {
+        List<char> toReturn = new();
+        foreach (var c in Assistant.Instance.Bomb.serial)
+        {
+            if (char.IsLetter(c))
+            {
+                toReturn.Add(c);
+            }
+        }
+
+        return toReturn;
+    }
+
+    private List<int> getDigitsInSerial()
+    {
+        List<int> toReturn = new();
+        foreach (var c in Assistant.Instance.Bomb.serial)
+        {
+            if (char.IsDigit(c))
+            {
+                toReturn.Add((int)char.GetNumericValue(c));
+            }
+        }
+
+        return toReturn;
+    }
+
 
     public Bomb(int batteries, int holders, string serial, int emptyPlates, Plate[]? plates,
-        List<Indicator> indicators)
+        List<Indicator>? indicators)
     {
         this.batteries = batteries;
         this.holders = holders;
         this.serial = serial.ToUpper();
         this.emptyPlates = emptyPlates;
-        this.plates = plates;
-        this.indicators = indicators;
+        this.plates = plates ?? Array.Empty<Plate>();
+        this.indicators = indicators ?? new List<Indicator>();
     }
 
     public int getLargestDigitInSerial()
@@ -90,11 +123,12 @@ public class Bomb
         return (int)char.GetNumericValue(Assistant.Instance.Bomb.serial[5]);
     }
 
-    public int getFirstDigitOfSerial()
+    public int getDigitOfSerial(int index)
     {
-        foreach (var c in Assistant.Instance.Bomb.serial)
-            if (char.IsDigit(c))
-                return (int)char.GetNumericValue(c);
+        if (digitsInSerial.Any())
+        {
+            return digitsInSerial[index - 1];
+        }
         throw new Exception("No digit in serial");
     }
 
@@ -123,7 +157,7 @@ public class Bomb
         var Serial = 0;
         var RCA = 0;
 
-        foreach (var plate in Assistant.Instance.Bomb.plates)
+        foreach (var plate in plates)
         {
             if (plate.dvid) DVID++;
 
@@ -139,6 +173,28 @@ public class Bomb
         }
 
         return RCA >= 2 || Serial >= 2 || RJ45 >= 2 || Parallel >= 2 || PS2 >= 2 || DVID >= 2;
+    }
+
+    public int countPorts()
+    {
+        if (plates == null)
+        {
+            return 0;
+        }
+
+        int count = 0;
+
+        foreach (Plate plate in plates)
+        {
+            if (plate.dvid) count++;
+            if (plate.parallel) count++;
+            if (plate.ps2) count++;
+            if (plate.rj45) count++;
+            if (plate.serial) count++;
+            if (plate.rca) count++;
+        }
+
+        return count;
     }
 
     public int countLitIndicators()
@@ -163,13 +219,22 @@ public class Bomb
         return toReturn;
     }
 
-    public char getFirstLetterInSerial()
+    public char getLetterInSerial(int index)
     {
-        foreach (var c in serial)
-            if (char.IsLetter(c))
-                return c;
+        if (lettersInSerial.Any())
+        {
+            return lettersInSerial[index - 1];
+        }
+        throw new Exception("No letters in serial");
+    }
 
-        return 'A';
+    public char getLastLetterInSerial()
+    {
+        if (lettersInSerial.Any())
+        {
+            return lettersInSerial.Last();
+        }
+        throw new Exception("No letters in serial");
     }
 }
 

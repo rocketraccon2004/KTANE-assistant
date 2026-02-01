@@ -1,10 +1,10 @@
 ﻿namespace KTANE_Assistant.Forms;
 
-public partial class frmWhosOnFirst : Form
+public partial class frmWhosOnFirst : BaseForm
 {
     private Dictionary<string, string> solutions = new();
 
-    public frmWhosOnFirst()
+    public frmWhosOnFirst(bool showButtons) : base(showButtons)
     {
         InitializeComponent();
     }
@@ -91,7 +91,7 @@ public partial class frmWhosOnFirst : Form
         Console.Write("Test");
     }
 
-    private void btnSubmit2_Click(object sender, EventArgs e)
+    private void btnSolve_Click(object sender, EventArgs e)
     {
         txtSolution.Text = solutions[txtWord2.Text.ToUpper()];
     }

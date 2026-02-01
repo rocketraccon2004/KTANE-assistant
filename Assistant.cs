@@ -38,7 +38,7 @@ public class Assistant
         }
         else
         {
-            Application.Exit();
+            Environment.Exit(0);
         }
     }
 }

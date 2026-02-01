@@ -1,6 +1,6 @@
 ﻿namespace KTANE_Assistant.Forms
 {
-    partial class frmColourFlash
+    partial class frmColorFlash
     {
         /// <summary>
         /// Required designer variable.
@@ -28,357 +28,376 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.cbWord1 = new System.Windows.Forms.ComboBox();
-            this.cbWord2 = new System.Windows.Forms.ComboBox();
-            this.cbWord3 = new System.Windows.Forms.ComboBox();
-            this.cbWord4 = new System.Windows.Forms.ComboBox();
-            this.cbWord5 = new System.Windows.Forms.ComboBox();
-            this.cbWord6 = new System.Windows.Forms.ComboBox();
-            this.cbWord7 = new System.Windows.Forms.ComboBox();
-            this.cbWord8 = new System.Windows.Forms.ComboBox();
-            this.cbColour1 = new System.Windows.Forms.ComboBox();
-            this.cbColour2 = new System.Windows.Forms.ComboBox();
-            this.cbColour3 = new System.Windows.Forms.ComboBox();
-            this.cbColour4 = new System.Windows.Forms.ComboBox();
-            this.cbColour5 = new System.Windows.Forms.ComboBox();
-            this.cbColour6 = new System.Windows.Forms.ComboBox();
-            this.cbColour7 = new System.Windows.Forms.ComboBox();
-            this.cbColour8 = new System.Windows.Forms.ComboBox();
-            this.SuspendLayout();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            label9 = new Label();
+            label10 = new Label();
+            cbWord1 = new ComboBox();
+            cbWord2 = new ComboBox();
+            cbWord3 = new ComboBox();
+            cbWord4 = new ComboBox();
+            cbWord5 = new ComboBox();
+            cbWord6 = new ComboBox();
+            cbWord7 = new ComboBox();
+            cbWord8 = new ComboBox();
+            cbColor1 = new ComboBox();
+            cbColor2 = new ComboBox();
+            cbColor3 = new ComboBox();
+            cbColor4 = new ComboBox();
+            cbColor5 = new ComboBox();
+            cbColor6 = new ComboBox();
+            cbColor7 = new ComboBox();
+            cbColor8 = new ComboBox();
+            SuspendLayout();
+            // 
+            // btnBack
+            // 
+            btnBack.Location = new Point(401, 397);
+            btnBack.Size = new Size(138, 60);
+            // 
+            // btnStrike
+            // 
+            btnStrike.Location = new Point(206, 397);
+            btnStrike.Size = new Size(138, 60);
+            // 
+            // btnSolve
+            // 
+            btnSolve.Location = new Point(11, 397);
+            btnSolve.Size = new Size(138, 60);
+            btnSolve.Click += btnSolve_Click;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(68, 60);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 37);
-            this.label1.TabIndex = 82;
-            this.label1.Text = "1:";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(60, 56);
+            label1.Name = "label1";
+            label1.Size = new Size(30, 30);
+            label1.TabIndex = 82;
+            label1.Text = "1:";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(68, 106);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 37);
-            this.label2.TabIndex = 83;
-            this.label2.Text = "2:";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(60, 99);
+            label2.Name = "label2";
+            label2.Size = new Size(30, 30);
+            label2.TabIndex = 83;
+            label2.Text = "2:";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(68, 146);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 37);
-            this.label3.TabIndex = 84;
-            this.label3.Text = "3:";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(60, 137);
+            label3.Name = "label3";
+            label3.Size = new Size(30, 30);
+            label3.TabIndex = 84;
+            label3.Text = "3:";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(68, 187);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 37);
-            this.label4.TabIndex = 85;
-            this.label4.Text = "4:";
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(60, 175);
+            label4.Name = "label4";
+            label4.Size = new Size(30, 30);
+            label4.TabIndex = 85;
+            label4.Text = "4:";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(68, 228);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 37);
-            this.label5.TabIndex = 86;
-            this.label5.Text = "5:";
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(60, 214);
+            label5.Name = "label5";
+            label5.Size = new Size(30, 30);
+            label5.TabIndex = 86;
+            label5.Text = "5:";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(68, 267);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 37);
-            this.label6.TabIndex = 87;
-            this.label6.Text = "6:";
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(60, 250);
+            label6.Name = "label6";
+            label6.Size = new Size(30, 30);
+            label6.TabIndex = 87;
+            label6.Text = "6:";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(68, 309);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 37);
-            this.label7.TabIndex = 88;
-            this.label7.Text = "7:";
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(60, 290);
+            label7.Name = "label7";
+            label7.Size = new Size(30, 30);
+            label7.TabIndex = 88;
+            label7.Text = "7:";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(68, 348);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(38, 37);
-            this.label8.TabIndex = 89;
-            this.label8.Text = "8:";
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.Location = new Point(60, 326);
+            label8.Name = "label8";
+            label8.Size = new Size(30, 30);
+            label8.TabIndex = 89;
+            label8.Text = "8:";
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(164, 18);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(82, 37);
-            this.label9.TabIndex = 90;
-            this.label9.Text = "Word";
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.Location = new Point(144, 17);
+            label9.Name = "label9";
+            label9.Size = new Size(67, 30);
+            label9.TabIndex = 90;
+            label9.Text = "Word";
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(388, 18);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(97, 37);
-            this.label10.TabIndex = 91;
-            this.label10.Text = "Colour";
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.Location = new Point(340, 17);
+            label10.Name = "label10";
+            label10.Size = new Size(78, 30);
+            label10.TabIndex = 91;
+            label10.Text = "Color";
             // 
             // cbWord1
             // 
-            this.cbWord1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbWord1.FormattingEnabled = true;
-            this.cbWord1.Location = new System.Drawing.Point(140, 60);
-            this.cbWord1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbWord1.Name = "cbWord1";
-            this.cbWord1.Size = new System.Drawing.Size(153, 45);
-            this.cbWord1.TabIndex = 92;
+            cbWord1.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cbWord1.FormattingEnabled = true;
+            cbWord1.Location = new Point(122, 56);
+            cbWord1.Margin = new Padding(3, 2, 3, 2);
+            cbWord1.Name = "cbWord1";
+            cbWord1.Size = new Size(134, 38);
+            cbWord1.TabIndex = 92;
             // 
             // cbWord2
             // 
-            this.cbWord2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbWord2.FormattingEnabled = true;
-            this.cbWord2.Location = new System.Drawing.Point(140, 106);
-            this.cbWord2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbWord2.Name = "cbWord2";
-            this.cbWord2.Size = new System.Drawing.Size(153, 45);
-            this.cbWord2.TabIndex = 93;
+            cbWord2.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cbWord2.FormattingEnabled = true;
+            cbWord2.Location = new Point(122, 99);
+            cbWord2.Margin = new Padding(3, 2, 3, 2);
+            cbWord2.Name = "cbWord2";
+            cbWord2.Size = new Size(134, 38);
+            cbWord2.TabIndex = 93;
             // 
             // cbWord3
             // 
-            this.cbWord3.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbWord3.FormattingEnabled = true;
-            this.cbWord3.Location = new System.Drawing.Point(140, 146);
-            this.cbWord3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbWord3.Name = "cbWord3";
-            this.cbWord3.Size = new System.Drawing.Size(153, 45);
-            this.cbWord3.TabIndex = 94;
+            cbWord3.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cbWord3.FormattingEnabled = true;
+            cbWord3.Location = new Point(122, 137);
+            cbWord3.Margin = new Padding(3, 2, 3, 2);
+            cbWord3.Name = "cbWord3";
+            cbWord3.Size = new Size(134, 38);
+            cbWord3.TabIndex = 94;
             // 
             // cbWord4
             // 
-            this.cbWord4.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbWord4.FormattingEnabled = true;
-            this.cbWord4.Location = new System.Drawing.Point(140, 186);
-            this.cbWord4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbWord4.Name = "cbWord4";
-            this.cbWord4.Size = new System.Drawing.Size(153, 45);
-            this.cbWord4.TabIndex = 95;
+            cbWord4.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cbWord4.FormattingEnabled = true;
+            cbWord4.Location = new Point(122, 174);
+            cbWord4.Margin = new Padding(3, 2, 3, 2);
+            cbWord4.Name = "cbWord4";
+            cbWord4.Size = new Size(134, 38);
+            cbWord4.TabIndex = 95;
             // 
             // cbWord5
             // 
-            this.cbWord5.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbWord5.FormattingEnabled = true;
-            this.cbWord5.Location = new System.Drawing.Point(140, 222);
-            this.cbWord5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbWord5.Name = "cbWord5";
-            this.cbWord5.Size = new System.Drawing.Size(153, 45);
-            this.cbWord5.TabIndex = 96;
+            cbWord5.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cbWord5.FormattingEnabled = true;
+            cbWord5.Location = new Point(122, 208);
+            cbWord5.Margin = new Padding(3, 2, 3, 2);
+            cbWord5.Name = "cbWord5";
+            cbWord5.Size = new Size(134, 38);
+            cbWord5.TabIndex = 96;
             // 
             // cbWord6
             // 
-            this.cbWord6.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbWord6.FormattingEnabled = true;
-            this.cbWord6.Location = new System.Drawing.Point(140, 266);
-            this.cbWord6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbWord6.Name = "cbWord6";
-            this.cbWord6.Size = new System.Drawing.Size(153, 45);
-            this.cbWord6.TabIndex = 97;
+            cbWord6.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cbWord6.FormattingEnabled = true;
+            cbWord6.Location = new Point(122, 249);
+            cbWord6.Margin = new Padding(3, 2, 3, 2);
+            cbWord6.Name = "cbWord6";
+            cbWord6.Size = new Size(134, 38);
+            cbWord6.TabIndex = 97;
             // 
             // cbWord7
             // 
-            this.cbWord7.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbWord7.FormattingEnabled = true;
-            this.cbWord7.Location = new System.Drawing.Point(140, 309);
-            this.cbWord7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbWord7.Name = "cbWord7";
-            this.cbWord7.Size = new System.Drawing.Size(153, 45);
-            this.cbWord7.TabIndex = 98;
+            cbWord7.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cbWord7.FormattingEnabled = true;
+            cbWord7.Location = new Point(122, 290);
+            cbWord7.Margin = new Padding(3, 2, 3, 2);
+            cbWord7.Name = "cbWord7";
+            cbWord7.Size = new Size(134, 38);
+            cbWord7.TabIndex = 98;
             // 
             // cbWord8
             // 
-            this.cbWord8.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbWord8.FormattingEnabled = true;
-            this.cbWord8.Location = new System.Drawing.Point(140, 346);
-            this.cbWord8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbWord8.Name = "cbWord8";
-            this.cbWord8.Size = new System.Drawing.Size(153, 45);
-            this.cbWord8.TabIndex = 99;
+            cbWord8.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cbWord8.FormattingEnabled = true;
+            cbWord8.Location = new Point(122, 324);
+            cbWord8.Margin = new Padding(3, 2, 3, 2);
+            cbWord8.Name = "cbWord8";
+            cbWord8.Size = new Size(134, 38);
+            cbWord8.TabIndex = 99;
             // 
-            // cbColour1
+            // cbColor1
             // 
-            this.cbColour1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbColour1.FormattingEnabled = true;
-            this.cbColour1.Location = new System.Drawing.Point(350, 58);
-            this.cbColour1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbColour1.Name = "cbColour1";
-            this.cbColour1.Size = new System.Drawing.Size(153, 45);
-            this.cbColour1.TabIndex = 108;
+            cbColor1.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cbColor1.FormattingEnabled = true;
+            cbColor1.Location = new Point(306, 54);
+            cbColor1.Margin = new Padding(3, 2, 3, 2);
+            cbColor1.Name = "cbColor1";
+            cbColor1.Size = new Size(134, 38);
+            cbColor1.TabIndex = 108;
             // 
-            // cbColour2
+            // cbColor2
             // 
-            this.cbColour2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbColour2.FormattingEnabled = true;
-            this.cbColour2.Location = new System.Drawing.Point(350, 106);
-            this.cbColour2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbColour2.Name = "cbColour2";
-            this.cbColour2.Size = new System.Drawing.Size(153, 45);
-            this.cbColour2.TabIndex = 109;
+            cbColor2.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cbColor2.FormattingEnabled = true;
+            cbColor2.Location = new Point(306, 99);
+            cbColor2.Margin = new Padding(3, 2, 3, 2);
+            cbColor2.Name = "cbColor2";
+            cbColor2.Size = new Size(134, 38);
+            cbColor2.TabIndex = 109;
             // 
-            // cbColour3
+            // cbColor3
             // 
-            this.cbColour3.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbColour3.FormattingEnabled = true;
-            this.cbColour3.Location = new System.Drawing.Point(350, 148);
-            this.cbColour3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbColour3.Name = "cbColour3";
-            this.cbColour3.Size = new System.Drawing.Size(153, 45);
-            this.cbColour3.TabIndex = 110;
+            cbColor3.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cbColor3.FormattingEnabled = true;
+            cbColor3.Location = new Point(306, 139);
+            cbColor3.Margin = new Padding(3, 2, 3, 2);
+            cbColor3.Name = "cbColor3";
+            cbColor3.Size = new Size(134, 38);
+            cbColor3.TabIndex = 110;
             // 
-            // cbColour4
+            // cbColor4
             // 
-            this.cbColour4.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbColour4.FormattingEnabled = true;
-            this.cbColour4.Location = new System.Drawing.Point(350, 187);
-            this.cbColour4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbColour4.Name = "cbColour4";
-            this.cbColour4.Size = new System.Drawing.Size(153, 45);
-            this.cbColour4.TabIndex = 111;
+            cbColor4.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cbColor4.FormattingEnabled = true;
+            cbColor4.Location = new Point(306, 175);
+            cbColor4.Margin = new Padding(3, 2, 3, 2);
+            cbColor4.Name = "cbColor4";
+            cbColor4.Size = new Size(134, 38);
+            cbColor4.TabIndex = 111;
             // 
-            // cbColour5
+            // cbColor5
             // 
-            this.cbColour5.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbColour5.FormattingEnabled = true;
-            this.cbColour5.Location = new System.Drawing.Point(350, 226);
-            this.cbColour5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbColour5.Name = "cbColour5";
-            this.cbColour5.Size = new System.Drawing.Size(153, 45);
-            this.cbColour5.TabIndex = 112;
+            cbColor5.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cbColor5.FormattingEnabled = true;
+            cbColor5.Location = new Point(306, 212);
+            cbColor5.Margin = new Padding(3, 2, 3, 2);
+            cbColor5.Name = "cbColor5";
+            cbColor5.Size = new Size(134, 38);
+            cbColor5.TabIndex = 112;
             // 
-            // cbColour6
+            // cbColor6
             // 
-            this.cbColour6.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbColour6.FormattingEnabled = true;
-            this.cbColour6.Location = new System.Drawing.Point(350, 267);
-            this.cbColour6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbColour6.Name = "cbColour6";
-            this.cbColour6.Size = new System.Drawing.Size(153, 45);
-            this.cbColour6.TabIndex = 113;
+            cbColor6.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cbColor6.FormattingEnabled = true;
+            cbColor6.Location = new Point(306, 250);
+            cbColor6.Margin = new Padding(3, 2, 3, 2);
+            cbColor6.Name = "cbColor6";
+            cbColor6.Size = new Size(134, 38);
+            cbColor6.TabIndex = 113;
             // 
-            // cbColour7
+            // cbColor7
             // 
-            this.cbColour7.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbColour7.FormattingEnabled = true;
-            this.cbColour7.Location = new System.Drawing.Point(350, 306);
-            this.cbColour7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbColour7.Name = "cbColour7";
-            this.cbColour7.Size = new System.Drawing.Size(153, 45);
-            this.cbColour7.TabIndex = 114;
+            cbColor7.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cbColor7.FormattingEnabled = true;
+            cbColor7.Location = new Point(306, 287);
+            cbColor7.Margin = new Padding(3, 2, 3, 2);
+            cbColor7.Name = "cbColor7";
+            cbColor7.Size = new Size(134, 38);
+            cbColor7.TabIndex = 114;
             // 
-            // cbColour8
+            // cbColor8
             // 
-            this.cbColour8.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbColour8.FormattingEnabled = true;
-            this.cbColour8.Location = new System.Drawing.Point(350, 346);
-            this.cbColour8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbColour8.Name = "cbColour8";
-            this.cbColour8.Size = new System.Drawing.Size(153, 45);
-            this.cbColour8.TabIndex = 115;
+            cbColor8.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cbColor8.FormattingEnabled = true;
+            cbColor8.Location = new Point(306, 324);
+            cbColor8.Margin = new Padding(3, 2, 3, 2);
+            cbColor8.Name = "cbColor8";
+            cbColor8.Size = new Size(134, 38);
+            cbColor8.TabIndex = 115;
             // 
-            // frmColourFlash
+            // frmColorFlash
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 499);
-            this.Controls.Add(this.cbColour8);
-            this.Controls.Add(this.cbColour7);
-            this.Controls.Add(this.cbColour6);
-            this.Controls.Add(this.cbColour5);
-            this.Controls.Add(this.cbColour4);
-            this.Controls.Add(this.cbColour3);
-            this.Controls.Add(this.cbColour2);
-            this.Controls.Add(this.cbColour1);
-            this.Controls.Add(this.cbWord8);
-            this.Controls.Add(this.cbWord7);
-            this.Controls.Add(this.cbWord6);
-            this.Controls.Add(this.cbWord5);
-            this.Controls.Add(this.cbWord4);
-            this.Controls.Add(this.cbWord3);
-            this.Controls.Add(this.cbWord2);
-            this.Controls.Add(this.cbWord1);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "frmColourFlash";
-            this.Text = "Colour Flash";
-            this.Load += new System.EventHandler(this.frmColourFlash_Load);
-            this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.label4, 0);
-            this.Controls.SetChildIndex(this.label5, 0);
-            this.Controls.SetChildIndex(this.label6, 0);
-            this.Controls.SetChildIndex(this.label7, 0);
-            this.Controls.SetChildIndex(this.label8, 0);
-            this.Controls.SetChildIndex(this.label9, 0);
-            this.Controls.SetChildIndex(this.label10, 0);
-            this.Controls.SetChildIndex(this.cbWord1, 0);
-            this.Controls.SetChildIndex(this.cbWord2, 0);
-            this.Controls.SetChildIndex(this.cbWord3, 0);
-            this.Controls.SetChildIndex(this.cbWord4, 0);
-            this.Controls.SetChildIndex(this.cbWord5, 0);
-            this.Controls.SetChildIndex(this.cbWord6, 0);
-            this.Controls.SetChildIndex(this.cbWord7, 0);
-            this.Controls.SetChildIndex(this.cbWord8, 0);
-            this.Controls.SetChildIndex(this.cbColour1, 0);
-            this.Controls.SetChildIndex(this.cbColour2, 0);
-            this.Controls.SetChildIndex(this.cbColour3, 0);
-            this.Controls.SetChildIndex(this.cbColour4, 0);
-            this.Controls.SetChildIndex(this.cbColour5, 0);
-            this.Controls.SetChildIndex(this.cbColour6, 0);
-            this.Controls.SetChildIndex(this.cbColour7, 0);
-            this.Controls.SetChildIndex(this.cbColour8, 0);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(560, 468);
+            Controls.Add(cbColor8);
+            Controls.Add(cbColor7);
+            Controls.Add(cbColor6);
+            Controls.Add(cbColor5);
+            Controls.Add(cbColor4);
+            Controls.Add(cbColor3);
+            Controls.Add(cbColor2);
+            Controls.Add(cbColor1);
+            Controls.Add(cbWord8);
+            Controls.Add(cbWord7);
+            Controls.Add(cbWord6);
+            Controls.Add(cbWord5);
+            Controls.Add(cbWord4);
+            Controls.Add(cbWord3);
+            Controls.Add(cbWord2);
+            Controls.Add(cbWord1);
+            Controls.Add(label10);
+            Controls.Add(label9);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "frmColorFlash";
+            Text = "Color Flash";
+            Load += frmColorFlash_Load;
+            Controls.SetChildIndex(btnSolve, 0);
+            Controls.SetChildIndex(btnStrike, 0);
+            Controls.SetChildIndex(btnBack, 0);
+            Controls.SetChildIndex(label1, 0);
+            Controls.SetChildIndex(label2, 0);
+            Controls.SetChildIndex(label3, 0);
+            Controls.SetChildIndex(label4, 0);
+            Controls.SetChildIndex(label5, 0);
+            Controls.SetChildIndex(label6, 0);
+            Controls.SetChildIndex(label7, 0);
+            Controls.SetChildIndex(label8, 0);
+            Controls.SetChildIndex(label9, 0);
+            Controls.SetChildIndex(label10, 0);
+            Controls.SetChildIndex(cbWord1, 0);
+            Controls.SetChildIndex(cbWord2, 0);
+            Controls.SetChildIndex(cbWord3, 0);
+            Controls.SetChildIndex(cbWord4, 0);
+            Controls.SetChildIndex(cbWord5, 0);
+            Controls.SetChildIndex(cbWord6, 0);
+            Controls.SetChildIndex(cbWord7, 0);
+            Controls.SetChildIndex(cbWord8, 0);
+            Controls.SetChildIndex(cbColor1, 0);
+            Controls.SetChildIndex(cbColor2, 0);
+            Controls.SetChildIndex(cbColor3, 0);
+            Controls.SetChildIndex(cbColor4, 0);
+            Controls.SetChildIndex(cbColor5, 0);
+            Controls.SetChildIndex(cbColor6, 0);
+            Controls.SetChildIndex(cbColor7, 0);
+            Controls.SetChildIndex(cbColor8, 0);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -401,13 +420,13 @@
         private ComboBox cbWord6;
         private ComboBox cbWord7;
         private ComboBox cbWord8;
-        private ComboBox cbColour1;
-        private ComboBox cbColour2;
-        private ComboBox cbColour3;
-        private ComboBox cbColour4;
-        private ComboBox cbColour5;
-        private ComboBox cbColour6;
-        private ComboBox cbColour7;
-        private ComboBox cbColour8;
+        private ComboBox cbColor1;
+        private ComboBox cbColor2;
+        private ComboBox cbColor3;
+        private ComboBox cbColor4;
+        private ComboBox cbColor5;
+        private ComboBox cbColor6;
+        private ComboBox cbColor7;
+        private ComboBox cbColor8;
     }
 }

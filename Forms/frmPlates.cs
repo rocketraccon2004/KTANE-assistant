@@ -2,7 +2,7 @@
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
 namespace KTANE_Assistant.Forms;
 
-public partial class frmPlates : Form
+public partial class frmPlates : BaseForm
 {
     private int batteries;
     private int currentIteration = 1;
@@ -12,7 +12,7 @@ public partial class frmPlates : Form
     private int plates;
     private string serial;
 
-    public frmPlates()
+    public frmPlates(bool showButtons) : base(showButtons)
     {
         InitializeComponent();
     }

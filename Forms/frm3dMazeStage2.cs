@@ -2,7 +2,7 @@
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frm3dMazeStage2 : Form
+public partial class frm3dMazeStage2 : BaseForm
 {
     private frm3dMaze firstStageForm;
 
@@ -11,12 +11,9 @@ public partial class frm3dMazeStage2 : Form
         InitializeComponent();
     }
 
-    public frm3dMazeStage2(
-        frm3dMaze firstStageForm
-    )
+    public frm3dMazeStage2(frm3dMaze firstStageForm, bool showButtons = true) : base(showButtons)
     {
         InitializeComponent();
-
         UpdateForm(firstStageForm);
     }
 

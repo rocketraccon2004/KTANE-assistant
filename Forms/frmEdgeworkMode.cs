@@ -4,9 +4,9 @@
 namespace KTANE_Assistant.Forms;
 
 #pragma warning disable CS8604 // Possible null reference argument.
-public partial class frmEdgeworkMode : Form
+public partial class frmEdgeworkMode : BaseForm
 {
-    public frmEdgeworkMode()
+    public frmEdgeworkMode(bool showButtons) : base(showButtons)
     {
         InitializeComponent();
     }

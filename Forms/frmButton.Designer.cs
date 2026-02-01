@@ -31,76 +31,90 @@ partial class frmButton
     /// </summary>
     private void InitializeComponent()
     {
-            this.dropDownColour = new System.Windows.Forms.ComboBox();
-            this.dropDownText = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
-            // 
-            // dropDownColour
-            // 
-            this.dropDownColour.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dropDownColour.FormattingEnabled = true;
-            this.dropDownColour.Items.AddRange(new object[] {
-            "Blue",
-            "White",
-            "Yellow",
-            "Red"});
-            this.dropDownColour.Location = new System.Drawing.Point(391, 43);
-            this.dropDownColour.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dropDownColour.Name = "dropDownColour";
-            this.dropDownColour.Size = new System.Drawing.Size(295, 37);
-            this.dropDownColour.TabIndex = 2;
-            // 
-            // dropDownText
-            // 
-            this.dropDownText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dropDownText.FormattingEnabled = true;
-            this.dropDownText.Items.AddRange(new object[] {
-            "Abort",
-            "Detonate",
-            "Hold",
-            "Press"});
-            this.dropDownText.Location = new System.Drawing.Point(391, 139);
-            this.dropDownText.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dropDownText.Name = "dropDownText";
-            this.dropDownText.Size = new System.Drawing.Size(295, 37);
-            this.dropDownText.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(279, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 35);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Colour";
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(279, 142);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 35);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Label";
-            // 
-            // frmButton
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 483);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dropDownText);
-            this.Controls.Add(this.dropDownColour);
-            this.Name = "frmButton";
-            this.Text = "Button";
-            this.Controls.SetChildIndex(this.dropDownColour, 0);
-            this.Controls.SetChildIndex(this.dropDownText, 0);
-            this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.label2, 0);
-            this.ResumeLayout(false);
+        dropDownColor = new ComboBox();
+        dropDownText = new ComboBox();
+        label1 = new Label();
+        label2 = new Label();
+        SuspendLayout();
+        // 
+        // btnBack
+        // 
+        btnBack.Location = new Point(261, 170);
+        btnBack.Size = new Size(123, 48);
+        // 
+        // btnStrike
+        // 
+        btnStrike.Location = new Point(135, 170);
+        btnStrike.Size = new Size(123, 48);
+        // 
+        // btnSolve
+        // 
+        btnSolve.Location = new Point(9, 170);
+        btnSolve.Size = new Size(123, 48);
+        btnSolve.Click += solve;
+        // 
+        // dropDownColor
+        // 
+        dropDownColor.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        dropDownColor.FormattingEnabled = true;
+        dropDownColor.Items.AddRange(new object[] { "Blue", "White", "Yellow", "Red" });
+        dropDownColor.Location = new Point(104, 19);
+        dropDownColor.Margin = new Padding(2, 3, 2, 3);
+        dropDownColor.Name = "dropDownColor";
+        dropDownColor.Size = new Size(230, 28);
+        dropDownColor.TabIndex = 2;
+        // 
+        // dropDownText
+        // 
+        dropDownText.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        dropDownText.FormattingEnabled = true;
+        dropDownText.Items.AddRange(new object[] { "Abort", "Detonate", "Hold", "Press" });
+        dropDownText.Location = new Point(104, 91);
+        dropDownText.Margin = new Padding(2, 3, 2, 3);
+        dropDownText.Name = "dropDownText";
+        dropDownText.Size = new Size(230, 28);
+        dropDownText.TabIndex = 3;
+        // 
+        // label1
+        // 
+        label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        label1.Location = new Point(17, 19);
+        label1.Margin = new Padding(2, 0, 2, 0);
+        label1.Name = "label1";
+        label1.Size = new Size(82, 26);
+        label1.TabIndex = 4;
+        label1.Text = "Color";
+        // 
+        // label2
+        // 
+        label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        label2.Location = new Point(17, 93);
+        label2.Margin = new Padding(2, 0, 2, 0);
+        label2.Name = "label2";
+        label2.Size = new Size(73, 26);
+        label2.TabIndex = 5;
+        label2.Text = "Label";
+        // 
+        // frmButton
+        // 
+        AutoScaleDimensions = new SizeF(7F, 15F);
+        AutoScaleMode = AutoScaleMode.Font;
+        ClientSize = new Size(398, 225);
+        Controls.Add(label2);
+        Controls.Add(label1);
+        Controls.Add(dropDownText);
+        Controls.Add(dropDownColor);
+        Margin = new Padding(2, 2, 2, 2);
+        Name = "frmButton";
+        Text = "Button";
+        Controls.SetChildIndex(btnSolve, 0);
+        Controls.SetChildIndex(btnStrike, 0);
+        Controls.SetChildIndex(btnBack, 0);
+        Controls.SetChildIndex(dropDownColor, 0);
+        Controls.SetChildIndex(dropDownText, 0);
+        Controls.SetChildIndex(label1, 0);
+        Controls.SetChildIndex(label2, 0);
+        ResumeLayout(false);
 
     }
 
@@ -109,7 +123,7 @@ partial class frmButton
     private System.Windows.Forms.ComboBox dropDownText;
     private System.Windows.Forms.Label label1;
 
-    private System.Windows.Forms.ComboBox dropDownColour;
+    private System.Windows.Forms.ComboBox dropDownColor;
 
     #endregion
 }

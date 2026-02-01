@@ -2,14 +2,14 @@ using KTANE_Assistant.Modules;
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frm3dMaze : Form
+public partial class frm3dMaze : BaseForm
 {
     //if the user is currently facing a wall
     private bool facingWall;
 
     private frm3dMazeStage2 secondStage;
 
-    public frm3dMaze()
+    public frm3dMaze(bool showButtons) : base(showButtons)
     {
         InitializeComponent();
         UpdateForm();
@@ -303,10 +303,5 @@ public partial class frm3dMaze : Form
     private void btnBack_Click(object sender, EventArgs e)
     {
         Assistant.Instance.backButtonClicked();
-    }
-
-    private void frm3dMaze_FormClosing(object sender, FormClosingEventArgs e)
-    {
-        Assistant.Instance.formClosed(e);
     }
 }

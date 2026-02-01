@@ -2,9 +2,9 @@
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frmEdgeworkInput : Form
+public partial class frmEdgeworkInput : BaseForm
 {
-    public frmEdgeworkInput()
+    public frmEdgeworkInput(bool showButtons) : base(showButtons)
     {
         InitializeComponent();
     }
@@ -17,7 +17,7 @@ public partial class frmEdgeworkInput : Form
         List<Indicator> indicators;
         var serial = serialNumberTextBox.Text.ToUpper();
 
-        if(serial.Length != 6)
+        if (serial.Length != 6)
         {
             Utils.throwError("Invalid parameter: Serial must be 6 characters");
         }
@@ -113,7 +113,7 @@ public partial class frmEdgeworkInput : Form
 
         if (plates != 0)
         {
-            var p = new frmPlates();
+            var p = new frmPlates(false);
             p.start(batteries, holders, plates, indicators, serial);
             return;
         }
@@ -137,5 +137,76 @@ public partial class frmEdgeworkInput : Form
                 cb.Checked = false;
             }
         }
+    }
+
+    private void bobLitCheckBox_CheckedChanged(object sender, EventArgs e)
+    {
+        if (bobLitCheckBox.Checked)
+            bobVisibleCheckBox.Checked = true;
+    }
+
+    private void carLitCheckBox_CheckedChanged(object sender, EventArgs e)
+    {
+        if (carLitCheckBox.Checked)
+            carVisibleCheckBox.Checked = true;
+    }
+
+    private void clrLitCheckBox_CheckedChanged(object sender, EventArgs e)
+    {
+        if (clrLitCheckBox.Checked)
+            clrVisibleCheckBox.Checked = true;
+    }
+
+    private void frkLitCheckBox_CheckedChanged(object sender, EventArgs e)
+    {
+        if (frkLitCheckBox.Checked)
+            frkVisibleCheckBox.Checked = true;
+    }
+
+    private void frqLitCheckBox_CheckedChanged(object sender, EventArgs e)
+    {
+        if (frqLitCheckBox.Checked)
+            frqVisibleCheckBox.Checked = true;
+    }
+
+    private void indLitCheckBox_CheckedChanged(object sender, EventArgs e)
+    {
+        if (indLitCheckBox.Checked)
+            indVisibleCheckBox.Checked = true;
+    }
+
+    private void msaLitCheckBox_CheckedChanged(object sender, EventArgs e)
+    {
+        if (msaLitCheckBox.Checked)
+            msaVisibleCheckBox.Checked = true;
+    }
+
+    private void nsaLitCheckBox_CheckedChanged(object sender, EventArgs e)
+    {
+        if (nsaLitCheckBox.Checked)
+            nsaVisibleCheckBox.Checked = true;
+    }
+
+    private void sigLitCheckBox_CheckedChanged(object sender, EventArgs e)
+    {
+        if (sigLitCheckBox.Checked)
+            sigVisibleCheckBox.Checked = true;
+    }
+
+    private void sndLitCheckBox_CheckedChanged(object sender, EventArgs e)
+    {
+        if (sndLitCheckBox.Checked)
+            sndVisibleCheckBox.Checked = true;
+    }
+
+    private void trnLitCheckBox_CheckedChanged(object sender, EventArgs e)
+    {
+        if (trnLitCheckBox.Checked)
+            trnVisibleCheckBox.Checked = true;
+    }
+
+    private void frmEdgeworkInput_FormClosing(object sender, FormClosingEventArgs e)
+    {
+        Assistant.Instance.formClosed(e);
     }
 }

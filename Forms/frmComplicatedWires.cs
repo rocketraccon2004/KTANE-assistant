@@ -2,11 +2,11 @@
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frmComplicatedWires : Form
+public partial class frmComplicatedWires : BaseForm
 {
     private ComplicatedWires module;
 
-    public frmComplicatedWires()
+    public frmComplicatedWires(bool showButtons) : base(showButtons)
     {
         InitializeComponent();
     }

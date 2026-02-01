@@ -3,10 +3,10 @@ using KTANE_Assistant.Modules;
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frmAlphabet : Form
+public partial class frmAlphabet : BaseForm
 {
     //TODO:Fix Formatting of form
-    public frmAlphabet()
+    public frmAlphabet(bool showButtons) : base(showButtons)
     {
         InitializeComponent();
     }
@@ -28,13 +28,7 @@ public partial class frmAlphabet : Form
 
     private void TextBox_TextChanged(object sender, EventArgs e)
     {
-        TextBox tb = (TextBox)sender;
-        var tabIndex = tb.TabIndex;
-        var controls = tableLayoutPanel1.Controls.Cast<Control>().Where(r => r.TabIndex > tabIndex);
-        if (controls.Any())
-        {
-            controls.OrderBy(r => r.TabIndex).First().Select();
-        }
+        Utils.getNextTB((TextBox)sender, this).Select();
     }
 
     private void frmAlphabet_Load(object sender, EventArgs e)

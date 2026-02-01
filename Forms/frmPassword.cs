@@ -2,7 +2,7 @@
 
 namespace KTANE_Assistant.Forms;
 #nullable enable
-public partial class frmPassword : Form
+public partial class frmPassword : BaseForm
 {
     private List<string>? _column1;
     private List<string>? _column2;
@@ -10,7 +10,7 @@ public partial class frmPassword : Form
     private List<string>? _column4;
     private List<string>? _column5;
 
-    public frmPassword()
+    public frmPassword(bool showButtons) : base(showButtons)
     {
         InitializeComponent();
     }
@@ -70,5 +70,16 @@ public partial class frmPassword : Form
         var module = new Password(_column1, _column2, _column3, _column4, _column5);
         module.Solve();
         Program.switchForm(Utils.getMainForm());
+    }
+
+    private void textbox_change(object sender, EventArgs e)
+    {
+        TextBox tb = (TextBox)sender;
+        int tabIndex = tb.TabIndex;
+        var controls = Controls.Cast<Control>().Where(c => c.TabIndex > tabIndex);
+        if (controls.Any())
+        {
+            controls.OrderBy(r => r.TabIndex).First().Select();
+        }
     }
 }

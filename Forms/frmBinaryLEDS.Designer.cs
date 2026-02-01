@@ -28,20 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnLED5 = new Button();
-            btnLED1 = new Button();
-            btnLED2 = new Button();
-            btnLED3 = new Button();
-            btnLED4 = new Button();
-            btnReset = new Button();
+            btnLED5 = new System.Windows.Forms.Button();
+            btnLED1 = new System.Windows.Forms.Button();
+            btnLED2 = new System.Windows.Forms.Button();
+            btnLED3 = new System.Windows.Forms.Button();
+            btnLED4 = new System.Windows.Forms.Button();
+            btnReset = new System.Windows.Forms.Button();
             SuspendLayout();
+            // 
+            // btnBack
+            // 
+            btnBack.Location = new System.Drawing.Point(359, 226);
+            btnBack.Size = new System.Drawing.Size(156, 63);
+            // 
+            // btnStrike
+            // 
+            btnStrike.Location = new System.Drawing.Point(199, 226);
+            btnStrike.Size = new System.Drawing.Size(156, 63);
+            // 
+            // btnSolve
+            // 
+            btnSolve.Location = new System.Drawing.Point(39, 227);
+            btnSolve.Size = new System.Drawing.Size(156, 63);
+            btnSolve.Click += btnSolve_Click;
             // 
             // btnLED5
             // 
-            btnLED5.BackColor = Color.Red;
-            btnLED5.Location = new Point(39, 24);
+            btnLED5.BackColor = System.Drawing.Color.Red;
+            btnLED5.Location = new System.Drawing.Point(39, 24);
             btnLED5.Name = "btnLED5";
-            btnLED5.Size = new Size(80, 18);
+            btnLED5.Size = new System.Drawing.Size(80, 18);
             btnLED5.TabIndex = 82;
             btnLED5.Text = "\r\n";
             btnLED5.UseVisualStyleBackColor = false;
@@ -49,10 +65,10 @@
             // 
             // btnLED1
             // 
-            btnLED1.BackColor = Color.Red;
-            btnLED1.Location = new Point(414, 24);
+            btnLED1.BackColor = System.Drawing.Color.Red;
+            btnLED1.Location = new System.Drawing.Point(414, 24);
             btnLED1.Name = "btnLED1";
-            btnLED1.Size = new Size(80, 18);
+            btnLED1.Size = new System.Drawing.Size(80, 18);
             btnLED1.TabIndex = 83;
             btnLED1.Text = "\r\n";
             btnLED1.UseVisualStyleBackColor = false;
@@ -60,10 +76,10 @@
             // 
             // btnLED2
             // 
-            btnLED2.BackColor = Color.Red;
-            btnLED2.Location = new Point(328, 24);
+            btnLED2.BackColor = System.Drawing.Color.Red;
+            btnLED2.Location = new System.Drawing.Point(328, 24);
             btnLED2.Name = "btnLED2";
-            btnLED2.Size = new Size(80, 18);
+            btnLED2.Size = new System.Drawing.Size(80, 18);
             btnLED2.TabIndex = 84;
             btnLED2.Text = "\r\n";
             btnLED2.UseVisualStyleBackColor = false;
@@ -71,10 +87,10 @@
             // 
             // btnLED3
             // 
-            btnLED3.BackColor = Color.Red;
-            btnLED3.Location = new Point(231, 24);
+            btnLED3.BackColor = System.Drawing.Color.Red;
+            btnLED3.Location = new System.Drawing.Point(231, 24);
             btnLED3.Name = "btnLED3";
-            btnLED3.Size = new Size(80, 18);
+            btnLED3.Size = new System.Drawing.Size(80, 18);
             btnLED3.TabIndex = 85;
             btnLED3.Text = "\r\n";
             btnLED3.UseVisualStyleBackColor = false;
@@ -82,10 +98,10 @@
             // 
             // btnLED4
             // 
-            btnLED4.BackColor = Color.Red;
-            btnLED4.Location = new Point(136, 24);
+            btnLED4.BackColor = System.Drawing.Color.Red;
+            btnLED4.Location = new System.Drawing.Point(136, 24);
             btnLED4.Name = "btnLED4";
-            btnLED4.Size = new Size(80, 18);
+            btnLED4.Size = new System.Drawing.Size(80, 18);
             btnLED4.TabIndex = 86;
             btnLED4.Text = "\r\n";
             btnLED4.UseVisualStyleBackColor = false;
@@ -93,27 +109,26 @@
             // 
             // btnReset
             // 
-            btnReset.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnReset.Location = new Point(562, 226);
+            btnReset.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+            btnReset.Location = new System.Drawing.Point(520, 226);
             btnReset.Name = "btnReset";
-            btnReset.Size = new Size(156, 63);
+            btnReset.Size = new System.Drawing.Size(156, 63);
             btnReset.TabIndex = 87;
             btnReset.Text = "Reset";
             btnReset.UseVisualStyleBackColor = true;
-            btnReset.Click += this.btnReset_Click;
+            btnReset.Click += btnReset_Click;
             // 
             // frmBinaryLEDs
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(801, 299);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(702, 311);
             Controls.Add(btnReset);
             Controls.Add(btnLED4);
             Controls.Add(btnLED3);
             Controls.Add(btnLED2);
             Controls.Add(btnLED1);
             Controls.Add(btnLED5);
-            Name = "frmBinaryLEDs";
             Text = "Binary LEDS";
             Load += frmBinaryLEDs_Load;
             Controls.SetChildIndex(btnLED5, 0);
@@ -122,6 +137,9 @@
             Controls.SetChildIndex(btnLED3, 0);
             Controls.SetChildIndex(btnLED4, 0);
             Controls.SetChildIndex(btnReset, 0);
+            Controls.SetChildIndex(btnSolve, 0);
+            Controls.SetChildIndex(btnStrike, 0);
+            Controls.SetChildIndex(btnBack, 0);
             ResumeLayout(false);
         }
 
@@ -132,6 +150,6 @@
         private Button btnLED2;
         private Button btnLED3;
         private Button btnLED4;
-        private Button btnReset;
+        private System.Windows.Forms.Button btnReset;
     }
 }

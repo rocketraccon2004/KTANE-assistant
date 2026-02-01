@@ -77,12 +77,12 @@ public class WireSequences : Module
     }
 
 
-    private string Solve(string Colour, string Letter)
+    private string Solve(string Color, string Letter)
     {
         var targetDictionary = new Dictionary<int, string[]>();
         var targetWireCount = 0;
 
-        switch (Colour)
+        switch (Color)
         {
             case "Red":
                 _redWires++;

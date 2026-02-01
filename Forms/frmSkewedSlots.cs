@@ -2,12 +2,12 @@
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frmSkewedSlots : Form
+public partial class frmSkewedSlots : BaseForm
 {
     private SkewedSlots Module;
     private bool solving;
 
-    public frmSkewedSlots()
+    public frmSkewedSlots(bool showButtons) : base(showButtons)
     {
         InitializeComponent();
     }

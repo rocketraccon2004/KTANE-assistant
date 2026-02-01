@@ -33,16 +33,28 @@
         label2 = new System.Windows.Forms.Label();
         mazeTextBox = new System.Windows.Forms.TextBox();
         label1 = new System.Windows.Forms.Label();
-        btnBack = new System.Windows.Forms.Button();
-        btnStrike = new System.Windows.Forms.Button();
-        btnSolve = new System.Windows.Forms.Button();
         SuspendLayout();
+        // 
+        // btnBack
+        // 
+        btnBack.Location = new System.Drawing.Point(350, 341);
+        btnBack.Size = new System.Drawing.Size(144, 47);
+        // 
+        // btnStrike
+        // 
+        btnStrike.Location = new System.Drawing.Point(198, 341);
+        btnStrike.Size = new System.Drawing.Size(148, 47);
+        // 
+        // btnSolve
+        // 
+        btnSolve.Location = new System.Drawing.Point(13, 341);
+        btnSolve.Size = new System.Drawing.Size(181, 47);
+        btnSolve.Click += btnSolve_Click;
         // 
         // facingWallCheckBox
         // 
         facingWallCheckBox.AutoSize = true;
-        facingWallCheckBox.Location = new System.Drawing.Point(235, 410);
-        facingWallCheckBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+        facingWallCheckBox.Location = new System.Drawing.Point(206, 308);
         facingWallCheckBox.Name = "facingWallCheckBox";
         facingWallCheckBox.Size = new System.Drawing.Size(106, 24);
         facingWallCheckBox.TabIndex = 19;
@@ -51,16 +63,16 @@
         // 
         // pathTextBox
         // 
-        pathTextBox.Location = new System.Drawing.Point(183, 356);
-        pathTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+        pathTextBox.Location = new System.Drawing.Point(160, 267);
+        pathTextBox.Margin = new System.Windows.Forms.Padding(4);
         pathTextBox.Name = "pathTextBox";
-        pathTextBox.Size = new System.Drawing.Size(192, 27);
+        pathTextBox.Size = new System.Drawing.Size(168, 27);
         pathTextBox.TabIndex = 18;
         // 
         // label2
         // 
         label2.AutoSize = true;
-        label2.Location = new System.Drawing.Point(123, 299);
+        label2.Location = new System.Drawing.Point(108, 224);
         label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
         label2.Name = "label2";
         label2.Size = new System.Drawing.Size(360, 20);
@@ -69,51 +81,21 @@
         // 
         // mazeTextBox
         // 
-        mazeTextBox.Location = new System.Drawing.Point(183, 85);
-        mazeTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+        mazeTextBox.Location = new System.Drawing.Point(160, 64);
+        mazeTextBox.Margin = new System.Windows.Forms.Padding(4);
         mazeTextBox.Name = "mazeTextBox";
-        mazeTextBox.Size = new System.Drawing.Size(192, 27);
+        mazeTextBox.Size = new System.Drawing.Size(168, 27);
         mazeTextBox.TabIndex = 16;
         // 
         // label1
         // 
         label1.AutoSize = true;
-        label1.Location = new System.Drawing.Point(179, 39);
+        label1.Location = new System.Drawing.Point(157, 29);
         label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
         label1.Name = "label1";
         label1.Size = new System.Drawing.Size(227, 20);
         label1.TabIndex = 15;
         label1.Text = "What are the letters in the maze?";
-        // 
-        // btnBack
-        // 
-        btnBack.Location = new System.Drawing.Point(28, 468);
-        btnBack.Name = "btnBack";
-        btnBack.Size = new System.Drawing.Size(151, 45);
-        btnBack.TabIndex = 20;
-        btnBack.Text = "Back";
-        btnBack.UseVisualStyleBackColor = true;
-        btnBack.Click += btnBack_Click;
-        // 
-        // btnStrike
-        // 
-        btnStrike.Location = new System.Drawing.Point(190, 468);
-        btnStrike.Name = "btnStrike";
-        btnStrike.Size = new System.Drawing.Size(151, 45);
-        btnStrike.TabIndex = 21;
-        btnStrike.Text = "Strike";
-        btnStrike.UseVisualStyleBackColor = true;
-        btnStrike.Click += btnStrike_Click;
-        // 
-        // btnSolve
-        // 
-        btnSolve.Location = new System.Drawing.Point(347, 468);
-        btnSolve.Name = "btnSolve";
-        btnSolve.Size = new System.Drawing.Size(151, 45);
-        btnSolve.TabIndex = 22;
-        btnSolve.Text = "Solve";
-        btnSolve.UseVisualStyleBackColor = true;
-        btnSolve.Click += btnSolve_Click;
         // 
         // frm3dMaze
         // 
@@ -121,25 +103,27 @@
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         AutoSize = true;
         AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-        ClientSize = new System.Drawing.Size(577, 540);
-        Controls.Add(btnSolve);
-        Controls.Add(btnStrike);
-        Controls.Add(btnBack);
+        ClientSize = new System.Drawing.Size(505, 405);
         Controls.Add(facingWallCheckBox);
         Controls.Add(pathTextBox);
         Controls.Add(label2);
         Controls.Add(mazeTextBox);
         Controls.Add(label1);
-        Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+        Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
         Text = "3d Maze";
-        FormClosing += frm3dMaze_FormClosing;
+        Controls.SetChildIndex(label1, 0);
+        Controls.SetChildIndex(mazeTextBox, 0);
+        Controls.SetChildIndex(label2, 0);
+        Controls.SetChildIndex(pathTextBox, 0);
+        Controls.SetChildIndex(facingWallCheckBox, 0);
+        Controls.SetChildIndex(btnSolve, 0);
+        Controls.SetChildIndex(btnStrike, 0);
+        Controls.SetChildIndex(btnBack, 0);
         ResumeLayout(false);
         PerformLayout();
     }
 
-    private System.Windows.Forms.Button btnBack;
-    private System.Windows.Forms.Button btnStrike;
-    private System.Windows.Forms.Button btnSolve;
+    public System.Windows.Forms.Button btnSolve;
 
     #endregion
 

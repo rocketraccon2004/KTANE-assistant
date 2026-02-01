@@ -3,11 +3,11 @@ using KTANE_Assistant.Modules;
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frmAdventureGame : Form
+public partial class frmAdventureGame : BaseForm
 {
     private AdventureGame module = new();
 
-    public frmAdventureGame()
+    public frmAdventureGame(bool showButtons) : base(showButtons)
     {
         InitializeComponent();
         ddMonster.SelectedIndex = 0;

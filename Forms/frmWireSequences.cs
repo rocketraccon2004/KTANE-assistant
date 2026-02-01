@@ -2,11 +2,11 @@
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frmWireSequences : Form
+public partial class frmWireSequences : BaseForm
 {
     private WireSequences module;
 
-    public frmWireSequences()
+    public frmWireSequences(bool showButtons) : base(showButtons)
     {
         InitializeComponent();
         module = new WireSequences();
@@ -14,9 +14,9 @@ public partial class frmWireSequences : Form
 
     private void btnSolve_Click(object sender, EventArgs e)
     {
-        var colour1 = cbWire1Colour.Text;
-        var colour2 = cbWire2Colour.Text;
-        var colour3 = cbWire3Colour.Text;
+        var colour1 = cbWire1Color.Text;
+        var colour2 = cbWire2Color.Text;
+        var colour3 = cbWire3Color.Text;
 
         var letter1 = cbWire1End.Text;
         var letter2 = cbWire2End.Text;

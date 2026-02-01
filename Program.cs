@@ -10,7 +10,7 @@ internal static class Program
     [STAThread]
     private static void Main()
     {
-        Application.Run(new frmEdgeworkMode());
+        Application.Run(new frmEdgeworkMode(false));
     }
 
     public static void switchForm(Form _new)

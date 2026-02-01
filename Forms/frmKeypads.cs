@@ -3,7 +3,7 @@ using Button = System.Windows.Forms.Button;
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frmKeypads : Form
+public partial class frmKeypads : BaseForm
 {
     //the name of the selected images
     private string image1Name;
@@ -12,7 +12,7 @@ public partial class frmKeypads : Form
     private string image4Name;
     private Keypads module;
 
-   public frmKeypads()
+   public frmKeypads(bool showButtons) : base(showButtons)
     {
         InitializeComponent();
         //setting up the imaages for the buttons

@@ -16,9 +16,9 @@ Caesar Cipher
 Cheap Checkout
 Chess
 Chord Qualities
-Colour Flash
-Colour Math
-Coloured Squares
+Color Flash
+Color Math
+Colored Squares
 Combination Locks
 Complicated Buttons
 Complicated Wires

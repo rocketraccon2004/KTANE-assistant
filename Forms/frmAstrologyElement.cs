@@ -1,10 +1,10 @@
 ﻿namespace KTANE_Assistant.Forms;
 
-public partial class frmAstrologyElement : Form
+public partial class frmAstrologyElement : BaseForm
 {
     frmAstrology Form;
 
-    public frmAstrologyElement()
+    public frmAstrologyElement(bool showButtons) : base(showButtons)
     {
         InitializeComponent();
     }

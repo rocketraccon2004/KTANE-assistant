@@ -2,9 +2,9 @@
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frmKnob : Form
+public partial class frmKnob : BaseForm
 {
-    public frmKnob()
+    public frmKnob(bool showButtons) : base(showButtons)
     {
         InitializeComponent();
     }

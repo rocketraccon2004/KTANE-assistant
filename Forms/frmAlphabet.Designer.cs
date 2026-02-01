@@ -29,14 +29,27 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlphabet));
-            tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            txtLetter4 = new System.Windows.Forms.TextBox();
-            txtLetter3 = new System.Windows.Forms.TextBox();
-            txtLetter2 = new System.Windows.Forms.TextBox();
-            txtLetter1 = new System.Windows.Forms.TextBox();
-            btnReset = new System.Windows.Forms.Button();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            txtLetter4 = new TextBox();
+            txtLetter3 = new TextBox();
+            txtLetter2 = new TextBox();
+            txtLetter1 = new TextBox();
+            btnReset = new Button();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
+            // 
+            // btnBack
+            // 
+            resources.ApplyResources(btnBack, "btnBack");
+            // 
+            // btnStrike
+            // 
+            resources.ApplyResources(btnStrike, "btnStrike");
+            // 
+            // btnSolve
+            // 
+            resources.ApplyResources(btnSolve, "btnSolve");
+            btnSolve.Click += btnSolve_Click;
             // 
             // tableLayoutPanel1
             // 
@@ -81,10 +94,16 @@
             // frmAlphabet
             // 
             resources.ApplyResources(this, "$this");
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(btnReset);
             Controls.Add(tableLayoutPanel1);
+            Name = "frmAlphabet";
             Load += frmAlphabet_Load;
+            Controls.SetChildIndex(tableLayoutPanel1, 0);
+            Controls.SetChildIndex(btnReset, 0);
+            Controls.SetChildIndex(btnSolve, 0);
+            Controls.SetChildIndex(btnStrike, 0);
+            Controls.SetChildIndex(btnBack, 0);
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);

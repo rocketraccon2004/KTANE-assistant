@@ -121,6 +121,7 @@ partial class frmEdgeworkInput
         carLitCheckBox.TabIndex = 7;
         carLitCheckBox.Text = "Lit";
         carLitCheckBox.UseVisualStyleBackColor = true;
+        carLitCheckBox.CheckedChanged += carLitCheckBox_CheckedChanged;
         // 
         // carVisibleCheckBox
         // 
@@ -143,6 +144,7 @@ partial class frmEdgeworkInput
         clrLitCheckBox.TabIndex = 9;
         clrLitCheckBox.Text = "Lit";
         clrLitCheckBox.UseVisualStyleBackColor = true;
+        clrLitCheckBox.CheckedChanged += clrLitCheckBox_CheckedChanged;
         // 
         // clrVisibleCheckBox
         // 
@@ -165,6 +167,7 @@ partial class frmEdgeworkInput
         frkLitCheckBox.TabIndex = 11;
         frkLitCheckBox.Text = "Lit";
         frkLitCheckBox.UseVisualStyleBackColor = true;
+        frkLitCheckBox.CheckedChanged += frkLitCheckBox_CheckedChanged;
         // 
         // frkVisibleCheckBox
         // 
@@ -187,6 +190,7 @@ partial class frmEdgeworkInput
         frqLitCheckBox.TabIndex = 13;
         frqLitCheckBox.Text = "Lit";
         frqLitCheckBox.UseVisualStyleBackColor = true;
+        frqLitCheckBox.CheckedChanged += frqLitCheckBox_CheckedChanged;
         // 
         // frqVisibleCheckBox
         // 
@@ -209,6 +213,7 @@ partial class frmEdgeworkInput
         indLitCheckBox.TabIndex = 15;
         indLitCheckBox.Text = "Lit";
         indLitCheckBox.UseVisualStyleBackColor = true;
+        indLitCheckBox.CheckedChanged += indLitCheckBox_CheckedChanged;
         // 
         // msaVisibleCheckBox
         // 
@@ -231,6 +236,7 @@ partial class frmEdgeworkInput
         msaLitCheckBox.TabIndex = 17;
         msaLitCheckBox.Text = "Lit";
         msaLitCheckBox.UseVisualStyleBackColor = true;
+        msaLitCheckBox.CheckedChanged += msaLitCheckBox_CheckedChanged;
         // 
         // indVisibleCheckBox
         // 
@@ -253,6 +259,7 @@ partial class frmEdgeworkInput
         nsaLitCheckBox.TabIndex = 19;
         nsaLitCheckBox.Text = "Lit";
         nsaLitCheckBox.UseVisualStyleBackColor = true;
+        nsaLitCheckBox.CheckedChanged += nsaLitCheckBox_CheckedChanged;
         // 
         // trnVisibleCheckBox
         // 
@@ -275,6 +282,7 @@ partial class frmEdgeworkInput
         sndLitCheckBox.TabIndex = 23;
         sndLitCheckBox.Text = "Lit";
         sndLitCheckBox.UseVisualStyleBackColor = true;
+        sndLitCheckBox.CheckedChanged += sndLitCheckBox_CheckedChanged;
         // 
         // nsaVisibleCheckBox
         // 
@@ -297,6 +305,7 @@ partial class frmEdgeworkInput
         trnLitCheckBox.TabIndex = 25;
         trnLitCheckBox.Text = "Lit";
         trnLitCheckBox.UseVisualStyleBackColor = true;
+        trnLitCheckBox.CheckedChanged += trnLitCheckBox_CheckedChanged;
         // 
         // sndVisibleCheckBox
         // 
@@ -319,6 +328,7 @@ partial class frmEdgeworkInput
         sigLitCheckBox.TabIndex = 21;
         sigLitCheckBox.Text = "Lit";
         sigLitCheckBox.UseVisualStyleBackColor = true;
+        sigLitCheckBox.CheckedChanged += sigLitCheckBox_CheckedChanged;
         // 
         // sigVisibleCheckBox
         // 
@@ -341,6 +351,7 @@ partial class frmEdgeworkInput
         bobLitCheckBox.TabIndex = 5;
         bobLitCheckBox.Text = "Lit";
         bobLitCheckBox.UseVisualStyleBackColor = true;
+        bobLitCheckBox.CheckedChanged += bobLitCheckBox_CheckedChanged;
         // 
         // bobVisibleCheckBox
         // 
@@ -595,51 +606,7 @@ partial class frmEdgeworkInput
         Margin = new Padding(3, 2, 3, 2);
         Name = "frmEdgeworkInput";
         Text = "Manual Edgework";
-        Controls.SetChildIndex(serialNumberLabel, 0);
-        Controls.SetChildIndex(serialNumberTextBox, 0);
-        Controls.SetChildIndex(batteryLabel, 0);
-        Controls.SetChildIndex(batteryTextBox, 0);
-        Controls.SetChildIndex(indicatorLabel, 0);
-        Controls.SetChildIndex(bobLabel, 0);
-        Controls.SetChildIndex(carLabel, 0);
-        Controls.SetChildIndex(clrLabel, 0);
-        Controls.SetChildIndex(indLabel, 0);
-        Controls.SetChildIndex(frkLabel, 0);
-        Controls.SetChildIndex(frqLabel, 0);
-        Controls.SetChildIndex(msaLabel, 0);
-        Controls.SetChildIndex(nsaLabel, 0);
-        Controls.SetChildIndex(sigLabel, 0);
-        Controls.SetChildIndex(sndLabel, 0);
-        Controls.SetChildIndex(trnLabel, 0);
-        Controls.SetChildIndex(portLabel, 0);
-        Controls.SetChildIndex(submitButton, 0);
-        Controls.SetChildIndex(bobVisibleCheckBox, 0);
-        Controls.SetChildIndex(bobLitCheckBox, 0);
-        Controls.SetChildIndex(sigVisibleCheckBox, 0);
-        Controls.SetChildIndex(sigLitCheckBox, 0);
-        Controls.SetChildIndex(sndVisibleCheckBox, 0);
-        Controls.SetChildIndex(trnLitCheckBox, 0);
-        Controls.SetChildIndex(nsaVisibleCheckBox, 0);
-        Controls.SetChildIndex(sndLitCheckBox, 0);
-        Controls.SetChildIndex(trnVisibleCheckBox, 0);
-        Controls.SetChildIndex(nsaLitCheckBox, 0);
-        Controls.SetChildIndex(indVisibleCheckBox, 0);
-        Controls.SetChildIndex(msaLitCheckBox, 0);
-        Controls.SetChildIndex(msaVisibleCheckBox, 0);
-        Controls.SetChildIndex(indLitCheckBox, 0);
-        Controls.SetChildIndex(frqVisibleCheckBox, 0);
-        Controls.SetChildIndex(frqLitCheckBox, 0);
-        Controls.SetChildIndex(frkVisibleCheckBox, 0);
-        Controls.SetChildIndex(frkLitCheckBox, 0);
-        Controls.SetChildIndex(clrVisibleCheckBox, 0);
-        Controls.SetChildIndex(clrLitCheckBox, 0);
-        Controls.SetChildIndex(carVisibleCheckBox, 0);
-        Controls.SetChildIndex(carLitCheckBox, 0);
-        Controls.SetChildIndex(batteryHolderLabel, 0);
-        Controls.SetChildIndex(batteryHolderTextBox, 0);
-        Controls.SetChildIndex(label1, 0);
-        Controls.SetChildIndex(portPlateNumTextBox, 0);
-        Controls.SetChildIndex(btnReset, 0);
+        FormClosing += frmEdgeworkInput_FormClosing;
         ResumeLayout(false);
         PerformLayout();
     }

@@ -2,10 +2,10 @@
 
 namespace KTANE_Assistant.Forms;
 
-public partial class frmColourFlash : Form
+public partial class frmColorFlash : BaseForm
 {
     private List<string> colours = new();
-    private ColourFlash module;
+    private ColorFlash module;
 
     private List<string> possibleWords =
     [
@@ -19,12 +19,12 @@ public partial class frmColourFlash : Form
 
     private List<string> words = new();
 
-    public frmColourFlash()
+    public frmColorFlash(bool showButtons) : base(showButtons)
     {
         InitializeComponent();
     }
 
-    private void frmColourFlash_Load(object sender, EventArgs e)
+    private void frmColorFlash_Load(object sender, EventArgs e)
     {
         foreach (var s in possibleWords)
         {
@@ -36,14 +36,14 @@ public partial class frmColourFlash : Form
             cbWord6.Items.Add(s);
             cbWord7.Items.Add(s);
             cbWord8.Items.Add(s);
-            cbColour1.Items.Add(s);
-            cbColour2.Items.Add(s);
-            cbColour3.Items.Add(s);
-            cbColour4.Items.Add(s);
-            cbColour5.Items.Add(s);
-            cbColour6.Items.Add(s);
-            cbColour7.Items.Add(s);
-            cbColour8.Items.Add(s);
+            cbColor1.Items.Add(s);
+            cbColor2.Items.Add(s);
+            cbColor3.Items.Add(s);
+            cbColor4.Items.Add(s);
+            cbColor5.Items.Add(s);
+            cbColor6.Items.Add(s);
+            cbColor7.Items.Add(s);
+            cbColor8.Items.Add(s);
         }
     }
 
@@ -58,16 +58,16 @@ public partial class frmColourFlash : Form
         words.Add(cbWord7.Text);
         words.Add(cbWord8.Text);
 
-        colours.Add(cbColour1.Text);
-        colours.Add(cbColour2.Text);
-        colours.Add(cbColour3.Text);
-        colours.Add(cbColour4.Text);
-        colours.Add(cbColour5.Text);
-        colours.Add(cbColour6.Text);
-        colours.Add(cbColour7.Text);
-        colours.Add(cbColour8.Text);
+        colours.Add(cbColor1.Text);
+        colours.Add(cbColor2.Text);
+        colours.Add(cbColor3.Text);
+        colours.Add(cbColor4.Text);
+        colours.Add(cbColor5.Text);
+        colours.Add(cbColor6.Text);
+        colours.Add(cbColor7.Text);
+        colours.Add(cbColor8.Text);
 
-        module = new ColourFlash(words, colours);
+        module = new ColorFlash(words, colours);
         module.Solve();
     }
 }

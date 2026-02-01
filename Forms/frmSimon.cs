@@ -1,8 +1,8 @@
 ﻿namespace KTANE_Assistant.Forms;
 
-public partial class frmSimon : Form
+public partial class frmSimon : BaseForm
 {
-    public frmSimon()
+    public frmSimon(bool showButtons) : base(showButtons)
     {
         InitializeComponent();
     }
